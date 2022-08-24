@@ -1,0 +1,113 @@
+/* navbar */
+.navbar .navbar-brand-wrapper {
+  background: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  width: 60px;
+  border-right: none;
+}
+
+.navbar .navbar-menu-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  width: calc(100% - 60px);
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search {
+  margin-left: auto;
+  width: 256px !important;
+}
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group {
+  background: #fff;
+  border-radius: 4px;
+  padding: 0 0.75rem;
+}
+.navbar
+  .navbar-menu-wrapper
+  .navbar-nav
+  .nav-item.nav-search
+  .input-group
+  input {
+  font-size: 12px;
+}
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .count-indicator i {
+  font-size: 1rem;
+}
+.dropdown .dropdown-toggle:after {
+  display: none;
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  background: #a394fd;
+  padding: 20px 0;
+  width: 0;
+  z-index: 1040;
+  border-radius: 0 20px 20px 0;
+  border-right: none;
+  overflow: hidden;
+}
+.sidebar .logo__wrapper {
+  display: block;
+}
+.sidebar .brand__logo {
+  width: 46px;
+  height: 46px;
+}
+
+.sidebar__backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 0;
+  height: 0;
+  z-index: 1039;
+}
+
+.sidebar .nav:not(.sub-menu) {
+  margin-top: 1rem;
+}
+
+.sidebar .nav:not(.sub-menu) > .nav-item {
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.sidebar .nav .nav-item.active > .nav-link i,
+.sidebar .nav .nav-item.active > .nav-link .menu-title,
+.sidebar .nav .nav-item.active > .nav-link .menu-arrow {
+  color: #fff;
+}
+
+.main-panel {
+  width: 100%;
+}
+
+.content-wrapper {
+  padding: 40px;
+}
+
+@media (min-width: 992px) {
+  .sidebar-icon-only .navbar .navbar-brand-wrapper {
+    width: 60px;
+  }
+  .sidebar-icon-only .navbar .navbar-menu-wrapper {
+    width: calc(100% - 60px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sidebar-icon-only .sidebar {
+    width: 100px;
+    display: block;
+  }
+  .sidebar-icon-only .sidebar__backdrop {
+    width: 100vw;
+    height: 100vh;
+  }
+  .sidebar-icon-only .main-panel {
+    width: 100vw;
+  }
+}
