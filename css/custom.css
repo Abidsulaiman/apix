@@ -1,3 +1,32 @@
+/* common */
+.card {
+  border-radius: 15px !important;
+}
+.card .card-title {
+  font-size: 20px;
+  color: #222222;
+  text-transform: unset;
+}
+.bg-danger-light {
+  background: #fc3c3c1a;
+}
+.bg-success-light {
+  background: #66d18424;
+}
+.bg-warning-light {
+  background: #feb8311a;
+}
+.bg-purple {
+  background: #a394fd;
+}
+.border-purple {
+  border-color: #a394fd !important;
+}
+
+.table__border__radius {
+  border-radius: 12px;
+}
+
 /* navbar */
 .navbar .navbar-brand-wrapper {
   background: #ffffff;
@@ -92,6 +121,41 @@
 
 .content-wrapper {
   padding: 40px;
+  background: #f6f7fb;
+}
+.stats__card {
+  border: none;
+  border-left: 1px solid;
+}
+.stats__card .title {
+  color: #222222;
+}
+.stats__card .percentage__badge {
+  font-size: 10px;
+  width: 30px;
+  height: 20px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats__card .value {
+  color: #c5c5c5;
+}
+.stats__card .stats__card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table .table__product__image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
 @media (min-width: 992px) {
