@@ -58,6 +58,7 @@
 }
 
 .sidebar__backdrop {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -65,6 +66,9 @@
   width: 0;
   height: 0;
   z-index: 1039;
+}
+.sidebar-icon-only .sidebar__backdrop {
+  display: block;
 }
 
 .sidebar .nav:not(.sub-menu) {
@@ -109,5 +113,33 @@
   }
   .sidebar-icon-only .main-panel {
     width: 100vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sidebar .brand__logo {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar-icon-only .sidebar-offcanvas {
+    left: 0;
+    overflow: visible;
+    max-height: 100vh;
+    top: 0;
+    width: 70px;
+  }
+  .sidebar-icon-only .sidebar__backdrop {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  .navbar
+    .navbar-brand-wrapper
+    .navbar-brand-inner-wrapper
+    .navbar-toggler:not(.navbar-toggler-right) {
+    display: block;
+  }
+  .sidebar .nav .nav-item .nav-link {
+    padding: 1rem;
   }
 }
