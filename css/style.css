@@ -8648,19 +8648,19 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #4d83ff;
+  --bs-primary: #FEB831;
   --bs-secondary: #686868;
-  --bs-success: #71c016;
+  --bs-success: #66D184;
   --bs-info: #7859df;
-  --bs-warning: #ffc100;
+  --bs-warning: #FEB831;
   --bs-danger: #ff4747;
   --bs-light: #f8f9fa;
   --bs-dark: #282f3a;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
-  --bs-success-rgb: 25, 135, 84;
+  --bs-success-rgb: 102, 209, 132;
   --bs-info-rgb: 13, 202, 240;
-  --bs-warning-rgb: 255, 193, 7;
+  --bs-warning-rgb: 254, 184, 1;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
@@ -16029,7 +16029,7 @@ fieldset:disabled .btn {
 }
 
 .border-primary {
-  border-color: #4d83ff !important;
+  border-color: #0E9CFF !important;
 }
 
 .border-secondary {
@@ -16037,7 +16037,7 @@ fieldset:disabled .btn {
 }
 
 .border-success {
-  border-color: #71c016 !important;
+  border-color: #66D184 !important;
 }
 
 .border-info {
@@ -16045,7 +16045,7 @@ fieldset:disabled .btn {
 }
 
 .border-warning {
-  border-color: #ffc100 !important;
+  border-color: #FEB831 !important;
 }
 
 .border-danger {
