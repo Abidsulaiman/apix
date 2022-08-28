@@ -22,7 +22,6 @@
 .border-purple {
   border-color: #a394fd !important;
 }
-
 .table__border__radius {
   border-radius: 12px;
 }
@@ -141,6 +140,7 @@
 }
 .stats__card .value {
   color: #c5c5c5;
+  margin-bottom: 0;
 }
 .stats__card .stats__card__icon {
   width: 60px;
@@ -205,5 +205,20 @@
   }
   .sidebar .nav .nav-item .nav-link {
     padding: 1rem;
+  }
+  .sidebar .menu-icon {
+    margin: 0 auto;
+  }
+  .content-wrapper {
+    padding: 20px;
+    background: #f6f7fb;
+  }
+  .stats__card .stats__card__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .stats__card .stats__card__icon svg {
+    width: 20px;
+    height: 20px;
   }
 }

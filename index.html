@@ -265,7 +265,7 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row gx-5">
+            <div class="row gx-5 gy-4">
               <div class="col-lg-3">
                 <div class="card border-warning stats__card">
                   <div class="card-body">
@@ -378,19 +378,21 @@
 
                       <div class="stats__card__icon bg-success ms-auto">
                         <svg
-                          width="38"
-                          height="30"
-                          viewBox="0 0 38 30"
+                          width="34"
+                          height="32"
+                          viewBox="0 0 34 32"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                            d="M32.2983 28.8571V28.3571H31.7983H4.4412V1V0.5H3.9412H1.79834H1.29834V1V29.9286V30.1357L1.44479 30.2821L2.51621 31.3536L2.66266 31.5H2.86977H31.7983H32.2983V31V28.8571Z"
                             fill="white"
+                            stroke="white"
                           />
                           <path
-                            d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                            d="M26.4004 5.24511L15.7269 15.9207L12.5533 12.7452L12.4069 12.5986H12.1997H10.6825H10.4754L10.329 12.7451L1.75753 21.3165L1.40398 21.6701L1.75753 22.0236L3.27467 23.5408L3.62828 23.8944L3.98183 23.5407L11.441 16.0795L14.6146 19.2549L14.761 19.4015H14.9682H16.4854H16.6925L16.839 19.255L27.5124 8.57945L30.686 11.7549L31.0398 12.109L31.3935 11.7548L32.9085 10.2377L33.2615 9.8841L32.9082 9.53079L28.6225 5.24508L28.476 5.09863H28.2689H26.7539H26.5468L26.4004 5.24511Z"
                             fill="white"
+                            stroke="white"
                           />
                         </svg>
                       </div>
@@ -489,22 +491,24 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
-              <div class="col-lg-9">
+            <div class="row mt-4 gx-5 gy-4">
+              <div class="col-lg-9 stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Sales Analytics</h4>
+                    <div class="d-lg-flex align-items-center mb-3">
+                      <h4 class="card-title mb-lg-0">Sales Analytics</h4>
 
-                      <button class="btn btn-sm bg-light ms-auto">
-                        This week
-                      </button>
-                      <button class="btn btn-sm bg-light opacity-25">
-                        Last week
-                      </button>
-                      <button class="btn btn-sm bg-light opacity-25">
-                        Last month
-                      </button>
+                      <div
+                        class="d-flex align-items-center ms-auto mb-2 mb-lg-0"
+                      >
+                        <button class="btn btn-sm bg-light">This week</button>
+                        <button class="btn btn-sm bg-light opacity-25">
+                          Last week
+                        </button>
+                        <button class="btn btn-sm bg-light opacity-25">
+                          Last month
+                        </button>
+                      </div>
                     </div>
                     <canvas id="areaChart" height="70"></canvas>
                   </div>
@@ -512,7 +516,7 @@
               </div>
 
               <div class="col-lg-3 d-flex flex-column justify-content-between">
-                <div class="card border-purple stats__card">
+                <div class="card border-purple stats__card mb-4">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
                       <h5 class="mb-0 title">Total Influencers</h5>
@@ -598,22 +602,28 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
+            <div class="row mt-4 gx-5 gy-4">
               <div class="col-lg-6">
                 <div class="card border-0">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Best Selling Products</h4>
+                  <div class="card-body p-3 p-lg-4">
+                    <div class="d-lg-flex align-items-center">
+                      <h4 class="card-title mb-3 mb-lg-0">
+                        Best Selling Products
+                      </h4>
 
-                      <input
-                        type="text"
-                        name="daterange"
-                        value="01/01/2018 - 01/15/2018"
-                        class="ms-auto bg-light border-0 p-2"
-                      />
-                      <button class="btn btn-sm bg-light ms-2 text-secondary">
-                        <i class="fa fa-filter"></i>
-                      </button>
+                      <div class="d-flex align-items-stretch ms-lg-auto">
+                        <input
+                          type="text"
+                          name="daterange"
+                          value="01/01/2021 - 01/15/2022"
+                          class="ms-auto bg-light border-0 p-2 w-100"
+                        />
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
                     </div>
 
                     <div class="table-responsive table__border__radius mt-3">
@@ -688,19 +698,25 @@
 
               <div class="col-lg-6">
                 <div class="card border-0">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Best Selling Products</h4>
+                  <div class="card-body p-3 p-lg-4">
+                    <div class="d-lg-flex align-items-center">
+                      <h4 class="card-title mb-3 mb-lg-0">
+                        Best Selling Products
+                      </h4>
 
-                      <input
-                        type="text"
-                        name="daterange"
-                        value="01/01/2018 - 01/15/2018"
-                        class="ms-auto bg-light border-0 p-2"
-                      />
-                      <button class="btn btn-sm bg-light ms-2 text-secondary">
-                        <i class="fa fa-filter"></i>
-                      </button>
+                      <div class="d-flex align-items-stretch ms-lg-auto">
+                        <input
+                          type="text"
+                          name="daterange"
+                          value="01/01/2018 - 01/15/2018"
+                          class="ms-auto bg-light border-0 p-2 w-100"
+                        />
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
                     </div>
 
                     <div class="table-responsive table__border__radius mt-3">
@@ -774,7 +790,7 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
+            <div class="row mt-4 gx-5 gy-4">
               <div class="col-lg-9">
                 <div class="card border-0">
                   <div class="card-body">
@@ -807,8 +823,10 @@
                             <td>Shamseer</td>
                             <td>(+91) 9876543210</td>
                             <td>
-                              Akshya Nagar, 1st Block 1st Cross, Rammurthy
-                              nagar, Ba...
+                              <p class="text-truncate" style="width: 200px">
+                                Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                nagar, Ba...
+                              </p>
                             </td>
                             <td>03-07-2022</td>
 
@@ -821,10 +839,12 @@
                             </td>
 
                             <td>
-                              <button class="btn btn-sm btn-primary text-white">
-                                Edit
+                              <button
+                                class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                              >
+                                <span>Edit</span>
                                 <i
-                                  class="fas fa-pencil-alt"
+                                  class="fas fa-pencil-alt ms-1"
                                   style="font-size: 10px"
                                 ></i>
                               </button>
@@ -836,8 +856,10 @@
                             <td>Shamseer</td>
                             <td>(+91) 9876543210</td>
                             <td>
-                              Akshya Nagar, 1st Block 1st Cross, Rammurthy
-                              nagar, Ba...
+                              <p class="text-truncate" style="width: 200px">
+                                Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                nagar, Ba...
+                              </p>
                             </td>
                             <td>03-07-2022</td>
 
@@ -850,10 +872,12 @@
                             </td>
 
                             <td>
-                              <button class="btn btn-sm btn-primary text-white">
-                                Edit
+                              <button
+                                class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                              >
+                                <span>Edit</span>
                                 <i
-                                  class="fas fa-pencil-alt"
+                                  class="fas fa-pencil-alt ms-1"
                                   style="font-size: 10px"
                                 ></i>
                               </button>
@@ -866,7 +890,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-lg-3 stretch-card">
                 <div class="card border-0">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
