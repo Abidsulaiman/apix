@@ -1,4 +1,7 @@
 /* common */
+label {
+  margin-bottom: 10px;
+}
 .card {
   border-radius: 15px !important;
 }
@@ -49,6 +52,9 @@
 }
 .table .btn {
   font-size: 10px;
+}
+.form-control {
+  border-radius: 0.25rem !important;
 }
 
 /* navbar */
@@ -101,6 +107,10 @@
   border-right: none;
   overflow: hidden;
 }
+.sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
+  background: transparent;
+  color: #fff;
+}
 .sidebar .logo__wrapper {
   display: block;
 }
@@ -125,6 +135,12 @@
 
 .sidebar .nav:not(.sub-menu) {
   margin-top: 1rem;
+}
+.sidebar .nav-item {
+  opacity: 0.5;
+}
+.sidebar .nav-item.active {
+  opacity: 1;
 }
 .sidebar .nav:not(.sub-menu) > .nav-item {
   border-bottom: none;
@@ -193,8 +209,25 @@
   object-fit: cover;
   border-radius: 2px;
 }
+.cat__side__nav:hover,
+.cat__side__nav.active {
+  color: #7d6be7;
+}
+.cat__side__nav span {
+  width: 90%;
+  text-align: left;
+}
+
+.add__new__image__btn {
+  border: 2px dashed #7d6be7;
+  color: #7d6be7;
+  border-radius: 10px;
+}
 
 @media (min-width: 992px) {
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
+    color: #fff;
+  }
   .sidebar-icon-only .navbar .navbar-brand-wrapper {
     width: 60px;
   }
