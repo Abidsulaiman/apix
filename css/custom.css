@@ -7,6 +7,9 @@
   color: #222222;
   text-transform: unset;
 }
+.bg-purple-light {
+  background: #a394fd1a;
+}
 .bg-danger-light {
   background: #fc3c3c1a;
 }
@@ -19,12 +22,33 @@
 .bg-purple {
   background: #a394fd;
 }
+.bg-lime {
+  background: #d5fe31;
+}
 .border-purple {
   border-color: #a394fd !important;
 }
-
+.text-purple {
+  color: #a394fd;
+}
+.badge {
+  font-size: 10px;
+}
+.table thead th {
+  color: #c5c5c5;
+  font-size: 13px;
+  font-weight: 400;
+}
+.table td,
+.table td p,
+.table td h6 {
+  font-size: 10px;
+}
 .table__border__radius {
   border-radius: 12px;
+}
+.table .btn {
+  font-size: 10px;
 }
 
 /* navbar */
@@ -71,7 +95,6 @@
   top: 0;
   min-height: 100vh;
   background: #a394fd;
-  padding: 20px 0;
   width: 0;
   z-index: 1040;
   border-radius: 0 20px 20px 0;
@@ -103,7 +126,6 @@
 .sidebar .nav:not(.sub-menu) {
   margin-top: 1rem;
 }
-
 .sidebar .nav:not(.sub-menu) > .nav-item {
   border-bottom: none;
   margin-top: 0;
@@ -112,7 +134,20 @@
 .sidebar .nav .nav-item.active > .nav-link i,
 .sidebar .nav .nav-item.active > .nav-link .menu-title,
 .sidebar .nav .nav-item.active > .nav-link .menu-arrow {
+  transition: all ease-in-out 0.3ms;
   color: #fff;
+}
+
+.sidebar .nav-link:hover {
+  transition: all ease-in-out 0.3ms;
+  background: #7d6be7 !important;
+}
+
+.sidebar .nav .nav-item.active > .nav-link:hover i,
+.sidebar .nav .nav-item.active > .nav-link:hover .menu-title,
+.sidebar .nav .nav-item.active > .nav-link:hover .menu-arrow {
+  background: #7d6be7 !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .main-panel {
@@ -141,6 +176,7 @@
 }
 .stats__card .value {
   color: #c5c5c5;
+  margin-bottom: 0;
 }
 .stats__card .stats__card__icon {
   width: 60px;
@@ -170,6 +206,8 @@
   .sidebar-icon-only .sidebar {
     width: 100px;
     display: block;
+
+    padding: 20px;
   }
   .sidebar-icon-only .sidebar__backdrop {
     width: 100vw;
@@ -191,6 +229,8 @@
     max-height: 100vh;
     top: 0;
     width: 70px;
+
+    padding: 20px 0;
   }
   .sidebar-icon-only .sidebar__backdrop {
     display: block;
@@ -205,5 +245,21 @@
   }
   .sidebar .nav .nav-item .nav-link {
     padding: 1rem;
+    margin: 0 auto;
+  }
+  .sidebar .menu-icon {
+    margin: 0 auto;
+  }
+  .content-wrapper {
+    padding: 20px;
+    background: #f6f7fb;
+  }
+  .stats__card .stats__card__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .stats__card .stats__card__icon svg {
+    width: 20px;
+    height: 20px;
   }
 }

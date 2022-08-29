@@ -265,7 +265,7 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row gx-5">
+            <div class="row gx-5 gy-4">
               <div class="col-lg-3">
                 <div class="card border-warning stats__card">
                   <div class="card-body">
@@ -378,19 +378,21 @@
 
                       <div class="stats__card__icon bg-success ms-auto">
                         <svg
-                          width="38"
-                          height="30"
-                          viewBox="0 0 38 30"
+                          width="34"
+                          height="32"
+                          viewBox="0 0 34 32"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                            d="M32.2983 28.8571V28.3571H31.7983H4.4412V1V0.5H3.9412H1.79834H1.29834V1V29.9286V30.1357L1.44479 30.2821L2.51621 31.3536L2.66266 31.5H2.86977H31.7983H32.2983V31V28.8571Z"
                             fill="white"
+                            stroke="white"
                           />
                           <path
-                            d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                            d="M26.4004 5.24511L15.7269 15.9207L12.5533 12.7452L12.4069 12.5986H12.1997H10.6825H10.4754L10.329 12.7451L1.75753 21.3165L1.40398 21.6701L1.75753 22.0236L3.27467 23.5408L3.62828 23.8944L3.98183 23.5407L11.441 16.0795L14.6146 19.2549L14.761 19.4015H14.9682H16.4854H16.6925L16.839 19.255L27.5124 8.57945L30.686 11.7549L31.0398 12.109L31.3935 11.7548L32.9085 10.2377L33.2615 9.8841L32.9082 9.53079L28.6225 5.24508L28.476 5.09863H28.2689H26.7539H26.5468L26.4004 5.24511Z"
                             fill="white"
+                            stroke="white"
                           />
                         </svg>
                       </div>
@@ -489,30 +491,32 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
-              <div class="col-lg-9">
+            <div class="row mt-4 gx-5 gy-4">
+              <div class="col-lg-9 stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Sales Analytics</h4>
+                    <div class="d-lg-flex align-items-center mb-3">
+                      <h4 class="card-title mb-lg-0">Sales Analytics</h4>
 
-                      <button class="btn btn-sm bg-light ms-auto">
-                        This week
-                      </button>
-                      <button class="btn btn-sm bg-light opacity-25">
-                        Last week
-                      </button>
-                      <button class="btn btn-sm bg-light opacity-25">
-                        Last month
-                      </button>
+                      <div
+                        class="d-flex align-items-center ms-auto mb-2 mb-lg-0"
+                      >
+                        <button class="btn btn-sm bg-light">This week</button>
+                        <button class="btn btn-sm bg-light opacity-25">
+                          Last week
+                        </button>
+                        <button class="btn btn-sm bg-light opacity-25">
+                          Last month
+                        </button>
+                      </div>
                     </div>
-                    <canvas id="areaChart" height="70"></canvas>
+                    <canvas id="areachart-multi" height="70"></canvas>
                   </div>
                 </div>
               </div>
 
               <div class="col-lg-3 d-flex flex-column justify-content-between">
-                <div class="card border-purple stats__card">
+                <div class="card border-purple stats__card mb-4">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
                       <h5 class="mb-0 title">Total Influencers</h5>
@@ -536,16 +540,16 @@
                     <div class="mt-3 d-flex align-items-center">
                       <h6 class="fs-1 value">136</h6>
 
-                      <div class="stats__card__icon bg-purple ms-auto">
+                      <div class="stats__card__icon bg-lime ms-auto">
                         <svg
-                          width="30"
+                          width="31"
                           height="30"
-                          viewBox="0 0 30 30"
+                          viewBox="0 0 31 30"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M12 3C10.4087 3 8.88258 3.63214 7.75736 4.75736C6.63214 5.88258 6 7.4087 6 9C6 10.5913 6.63214 12.1174 7.75736 13.2426C8.88258 14.3679 10.4087 15 12 15C13.5913 15 15.1174 14.3679 16.2426 13.2426C17.3679 12.1174 18 10.5913 18 9C18 7.4087 17.3679 5.88258 16.2426 4.75736C15.1174 3.63214 13.5913 3 12 3ZM3 9C3 6.61305 3.94821 4.32387 5.63604 2.63604C7.32387 0.948211 9.61305 0 12 0C14.3869 0 16.6761 0.948211 18.364 2.63604C20.0518 4.32387 21 6.61305 21 9C21 11.3869 20.0518 13.6761 18.364 15.364C16.6761 17.0518 14.3869 18 12 18C9.61305 18 7.32387 17.0518 5.63604 15.364C3.94821 13.6761 3 11.3869 3 9ZM22.242 2.6355C22.3813 2.49604 22.5467 2.3854 22.7288 2.30991C22.9109 2.23442 23.1061 2.19557 23.3032 2.19557C23.5004 2.19557 23.6956 2.23442 23.8777 2.30991C24.0598 2.3854 24.2252 2.49604 24.3645 2.6355C25.2004 3.47125 25.8635 4.46347 26.3158 5.5555C26.7682 6.64753 27.0011 7.81798 27.0011 9C27.0011 10.182 26.7682 11.3525 26.3158 12.4445C25.8635 13.5365 25.2004 14.5288 24.3645 15.3645C24.2251 15.5039 24.0597 15.6144 23.8776 15.6898C23.6955 15.7653 23.5003 15.8041 23.3032 15.8041C23.1062 15.8041 22.911 15.7653 22.7289 15.6898C22.5468 15.6144 22.3814 15.5039 22.242 15.3645C22.1026 15.2251 21.9921 15.0597 21.9167 14.8776C21.8412 14.6955 21.8024 14.5003 21.8024 14.3032C21.8024 14.1062 21.8412 13.911 21.9167 13.7289C21.9921 13.5468 22.1026 13.3814 22.242 13.242C23.3668 12.1168 23.9987 10.591 23.9987 9C23.9987 7.40902 23.3668 5.88317 22.242 4.758C22.1025 4.61869 21.9919 4.45326 21.9164 4.27116C21.8409 4.08906 21.8021 3.89387 21.8021 3.69675C21.8021 3.49963 21.8409 3.30444 21.9164 3.12234C21.9919 2.94024 22.1025 2.77481 22.242 2.6355ZM23.295 22.1355C23.3917 21.7499 23.6375 21.4185 23.9784 21.2141C24.3192 21.0096 24.7273 20.9488 25.113 21.045C27.105 21.543 28.3665 22.815 29.091 24.267C29.793 25.6695 30 27.237 30 28.5C30 28.8978 29.842 29.2794 29.5607 29.5607C29.2794 29.842 28.8978 30 28.5 30C28.1022 30 27.7206 29.842 27.4393 29.5607C27.158 29.2794 27 28.8978 27 28.5C27 27.5145 26.832 26.4555 26.409 25.608C26.0085 24.8085 25.3935 24.207 24.3855 23.955C23.9999 23.8583 23.6685 23.6125 23.4641 23.2716C23.2596 22.9308 23.1988 22.5227 23.295 22.137V22.1355ZM6.75 24C4.86 24 3 25.8195 3 28.5C3 28.8978 2.84196 29.2794 2.56066 29.5607C2.27936 29.842 1.89782 30 1.5 30C1.10218 30 0.720644 29.842 0.43934 29.5607C0.158035 29.2794 0 28.8978 0 28.5C0 24.552 2.8395 21 6.75 21H17.25C21.1605 21 24 24.552 24 28.5C24 28.8978 23.842 29.2794 23.5607 29.5607C23.2794 29.842 22.8978 30 22.5 30C22.1022 30 21.7206 29.842 21.4393 29.5607C21.158 29.2794 21 28.8978 21 28.5C21 25.8195 19.14 24 17.25 24H6.75Z"
+                            d="M12.8237 0.673388C14.3235 0.096501 15.984 0.096501 17.4838 0.673388L28.2189 4.80127C28.8309 5.03693 29.3572 5.45248 29.7283 5.99317C30.0994 6.53386 30.2981 7.17431 30.298 7.83012V22.1652C30.2981 22.821 30.0994 23.4615 29.7283 24.0022C29.3572 24.5429 28.8309 24.9584 28.2189 25.1941L17.4838 29.3241C15.984 29.901 14.3235 29.901 12.8237 29.3241L2.09077 25.1941C1.47836 24.9588 0.951643 24.5433 0.580093 24.0026C0.208544 23.4619 0.00960833 22.8213 0.00952148 22.1652V7.83012C0.00960833 7.17405 0.208544 6.53342 0.580093 5.9927C0.951643 5.45199 1.47836 5.03658 2.09077 4.80127L12.8237 0.673388V0.673388ZM16.7071 2.6919C15.7072 2.30731 14.6003 2.30731 13.6004 2.6919L10.6062 3.84502L22.6999 8.42291L26.9143 6.61858L16.7071 2.68973V2.6919ZM28.1345 8.44671L16.2355 13.5503V27.457C16.3956 27.4159 16.5514 27.3662 16.7071 27.3056L27.4422 23.1777C27.6462 23.099 27.8215 22.9603 27.9451 22.78C28.0687 22.5996 28.1348 22.386 28.1345 22.1674V8.45103V8.44671ZM14.072 27.4549V13.5503L2.17298 8.44887V22.1652C2.17275 22.3839 2.23879 22.5974 2.36237 22.7778C2.48596 22.9582 2.66131 23.0968 2.86529 23.1756L13.6004 27.3034C13.7562 27.364 13.9119 27.4138 14.072 27.4549V27.4549ZM3.39318 6.61858L15.1538 11.6594L19.8355 9.65175L7.57515 5.00896L3.39318 6.61858Z"
                             fill="white"
                           />
                         </svg>
@@ -578,16 +582,16 @@
                     <div class="mt-3 d-flex align-items-center">
                       <h6 class="fs-1 value">136</h6>
 
-                      <div class="stats__card__icon bg-purple ms-auto">
+                      <div class="stats__card__icon bg-secondary ms-auto">
                         <svg
-                          width="30"
+                          width="31"
                           height="30"
-                          viewBox="0 0 30 30"
+                          viewBox="0 0 31 30"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M12 3C10.4087 3 8.88258 3.63214 7.75736 4.75736C6.63214 5.88258 6 7.4087 6 9C6 10.5913 6.63214 12.1174 7.75736 13.2426C8.88258 14.3679 10.4087 15 12 15C13.5913 15 15.1174 14.3679 16.2426 13.2426C17.3679 12.1174 18 10.5913 18 9C18 7.4087 17.3679 5.88258 16.2426 4.75736C15.1174 3.63214 13.5913 3 12 3ZM3 9C3 6.61305 3.94821 4.32387 5.63604 2.63604C7.32387 0.948211 9.61305 0 12 0C14.3869 0 16.6761 0.948211 18.364 2.63604C20.0518 4.32387 21 6.61305 21 9C21 11.3869 20.0518 13.6761 18.364 15.364C16.6761 17.0518 14.3869 18 12 18C9.61305 18 7.32387 17.0518 5.63604 15.364C3.94821 13.6761 3 11.3869 3 9ZM22.242 2.6355C22.3813 2.49604 22.5467 2.3854 22.7288 2.30991C22.9109 2.23442 23.1061 2.19557 23.3032 2.19557C23.5004 2.19557 23.6956 2.23442 23.8777 2.30991C24.0598 2.3854 24.2252 2.49604 24.3645 2.6355C25.2004 3.47125 25.8635 4.46347 26.3158 5.5555C26.7682 6.64753 27.0011 7.81798 27.0011 9C27.0011 10.182 26.7682 11.3525 26.3158 12.4445C25.8635 13.5365 25.2004 14.5288 24.3645 15.3645C24.2251 15.5039 24.0597 15.6144 23.8776 15.6898C23.6955 15.7653 23.5003 15.8041 23.3032 15.8041C23.1062 15.8041 22.911 15.7653 22.7289 15.6898C22.5468 15.6144 22.3814 15.5039 22.242 15.3645C22.1026 15.2251 21.9921 15.0597 21.9167 14.8776C21.8412 14.6955 21.8024 14.5003 21.8024 14.3032C21.8024 14.1062 21.8412 13.911 21.9167 13.7289C21.9921 13.5468 22.1026 13.3814 22.242 13.242C23.3668 12.1168 23.9987 10.591 23.9987 9C23.9987 7.40902 23.3668 5.88317 22.242 4.758C22.1025 4.61869 21.9919 4.45326 21.9164 4.27116C21.8409 4.08906 21.8021 3.89387 21.8021 3.69675C21.8021 3.49963 21.8409 3.30444 21.9164 3.12234C21.9919 2.94024 22.1025 2.77481 22.242 2.6355ZM23.295 22.1355C23.3917 21.7499 23.6375 21.4185 23.9784 21.2141C24.3192 21.0096 24.7273 20.9488 25.113 21.045C27.105 21.543 28.3665 22.815 29.091 24.267C29.793 25.6695 30 27.237 30 28.5C30 28.8978 29.842 29.2794 29.5607 29.5607C29.2794 29.842 28.8978 30 28.5 30C28.1022 30 27.7206 29.842 27.4393 29.5607C27.158 29.2794 27 28.8978 27 28.5C27 27.5145 26.832 26.4555 26.409 25.608C26.0085 24.8085 25.3935 24.207 24.3855 23.955C23.9999 23.8583 23.6685 23.6125 23.4641 23.2716C23.2596 22.9308 23.1988 22.5227 23.295 22.137V22.1355ZM6.75 24C4.86 24 3 25.8195 3 28.5C3 28.8978 2.84196 29.2794 2.56066 29.5607C2.27936 29.842 1.89782 30 1.5 30C1.10218 30 0.720644 29.842 0.43934 29.5607C0.158035 29.2794 0 28.8978 0 28.5C0 24.552 2.8395 21 6.75 21H17.25C21.1605 21 24 24.552 24 28.5C24 28.8978 23.842 29.2794 23.5607 29.5607C23.2794 29.842 22.8978 30 22.5 30C22.1022 30 21.7206 29.842 21.4393 29.5607C21.158 29.2794 21 28.8978 21 28.5C21 25.8195 19.14 24 17.25 24H6.75Z"
+                            d="M12.8237 0.673388C14.3235 0.096501 15.984 0.096501 17.4838 0.673388L28.2189 4.80127C28.8309 5.03693 29.3572 5.45248 29.7283 5.99317C30.0994 6.53386 30.2981 7.17431 30.298 7.83012V22.1652C30.2981 22.821 30.0994 23.4615 29.7283 24.0022C29.3572 24.5429 28.8309 24.9584 28.2189 25.1941L17.4838 29.3241C15.984 29.901 14.3235 29.901 12.8237 29.3241L2.09077 25.1941C1.47836 24.9588 0.951643 24.5433 0.580093 24.0026C0.208544 23.4619 0.00960833 22.8213 0.00952148 22.1652V7.83012C0.00960833 7.17405 0.208544 6.53342 0.580093 5.9927C0.951643 5.45199 1.47836 5.03658 2.09077 4.80127L12.8237 0.673388ZM16.7071 2.6919C15.7072 2.30731 14.6003 2.30731 13.6004 2.6919L10.6062 3.84502L22.6999 8.42291L26.9143 6.61858L16.7071 2.68973V2.6919ZM28.1345 8.44671L16.2355 13.5503V27.457C16.3956 27.4159 16.5513 27.3662 16.7071 27.3056L27.4422 23.1777C27.6462 23.099 27.8215 22.9603 27.9451 22.78C28.0687 22.5996 28.1348 22.386 28.1345 22.1674V8.45103V8.44671ZM14.072 27.4549V13.5503L2.17298 8.44887V22.1652C2.17275 22.3839 2.23879 22.5974 2.36238 22.7778C2.48596 22.9582 2.66131 23.0968 2.86529 23.1756L13.6004 27.3034C13.7562 27.364 13.9119 27.4138 14.072 27.4549ZM3.39318 6.61858L15.1538 11.6594L19.8355 9.65175L7.57515 5.00897L3.39318 6.61858Z"
                             fill="white"
                           />
                         </svg>
@@ -598,22 +602,28 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
+            <div class="row mt-4 gx-5 gy-4">
               <div class="col-lg-6">
                 <div class="card border-0">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Best Selling Products</h4>
+                  <div class="card-body p-3 p-lg-4">
+                    <div class="d-lg-flex align-items-center">
+                      <h4 class="card-title mb-3 mb-lg-0">
+                        Best Selling Products
+                      </h4>
 
-                      <input
-                        type="text"
-                        name="daterange"
-                        value="01/01/2018 - 01/15/2018"
-                        class="ms-auto bg-light border-0 p-2"
-                      />
-                      <button class="btn btn-sm bg-light ms-2 text-secondary">
-                        <i class="fa fa-filter"></i>
-                      </button>
+                      <div class="d-flex align-items-stretch ms-lg-auto">
+                        <input
+                          type="text"
+                          name="daterange"
+                          value="01/01/2021 - 01/15/2022"
+                          class="ms-auto bg-light border-0 p-2 w-100"
+                        />
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
                     </div>
 
                     <div class="table-responsive table__border__radius mt-3">
@@ -688,81 +698,76 @@
 
               <div class="col-lg-6">
                 <div class="card border-0">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <h4 class="card-title mb-0">Best Selling Products</h4>
+                  <div class="card-body p-3 p-lg-4">
+                    <div class="d-lg-flex align-items-center">
+                      <h4 class="card-title mb-3 mb-lg-0">Recent Orders</h4>
 
-                      <input
-                        type="text"
-                        name="daterange"
-                        value="01/01/2018 - 01/15/2018"
-                        class="ms-auto bg-light border-0 p-2"
-                      />
-                      <button class="btn btn-sm bg-light ms-2 text-secondary">
-                        <i class="fa fa-filter"></i>
-                      </button>
+                      <div class="d-flex align-items-stretch ms-lg-auto">
+                        <input
+                          type="text"
+                          name="daterange"
+                          value="01/01/2018 - 01/15/2018"
+                          class="ms-auto bg-light border-0 p-2 w-100"
+                        />
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
                     </div>
 
                     <div class="table-responsive table__border__radius mt-3">
                       <table class="table">
                         <thead class="bg-light">
                           <tr>
-                            <th>Product Name</th>
-                            <th>Sales (pcs)</th>
+                            <th>Order ID</th>
+                            <th>Store Name</th>
+                            <th>Date</th>
                             <th>Price</th>
-                            <th class="text-end">Status</th>
+                            <th>Status</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>
-                              <div class="d-flex align-items-center gx-2">
-                                <img
-                                  src="images/product-image.png"
-                                  alt="product image"
-                                  class="table__product__image mt-0"
-                                />
-                                <div class="ms-3">
-                                  <h6 class="mb-1">Sports shoe</h6>
-                                  <p class="mb-0">SKU12457</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>1289</td>
-                            <td>3.25 KWD</td>
-
-                            <td class="text-end">
-                              <label
-                                class="badge text-success rounded-2 bg-success-light"
-                              >
-                                <i class="fa fa-circle"></i>
-                                In stock
-                              </label>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="d-flex align-items-center gx-2">
-                                <img
-                                  src="images/product-image.png"
-                                  alt="product image"
-                                  class="table__product__image mt-0"
-                                />
-                                <div class="ms-3">
-                                  <h6 class="mb-1">Sports shoe</h6>
-                                  <p class="mb-0">SKU12457</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>1289</td>
+                            <td>#ID12457</td>
+                            <td>Shop Name</td>
+                            <td>02-07-2022</td>
                             <td>3.25 KWD</td>
 
                             <td class="text-end">
                               <label
                                 class="badge text-warning rounded-2 bg-warning-light"
                               >
-                                <i class="fa fa-circle"></i>
-                                Out of stock
+                                Cancelled
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#ID12457</td>
+                            <td>Shop Name</td>
+                            <td>02-07-2022</td>
+                            <td>3.25 KWD</td>
+
+                            <td class="text-end">
+                              <label
+                                class="badge text-success rounded-2 bg-success-light"
+                              >
+                                Delivered
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#ID12457</td>
+                            <td>Shop Name</td>
+                            <td>02-07-2022</td>
+                            <td>3.25 KWD</td>
+
+                            <td class="text-end">
+                              <label
+                                class="badge text-purple rounded-2 bg-purple-light"
+                              >
+                                Pending
                               </label>
                             </td>
                           </tr>
@@ -774,7 +779,7 @@
               </div>
             </div>
 
-            <div class="row mt-4 gx-5">
+            <div class="row mt-4 gx-5 gy-4">
               <div class="col-lg-9">
                 <div class="card border-0">
                   <div class="card-body">
@@ -807,8 +812,10 @@
                             <td>Shamseer</td>
                             <td>(+91) 9876543210</td>
                             <td>
-                              Akshya Nagar, 1st Block 1st Cross, Rammurthy
-                              nagar, Ba...
+                              <p class="text-truncate" style="width: 200px">
+                                Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                nagar, Ba...
+                              </p>
                             </td>
                             <td>03-07-2022</td>
 
@@ -821,10 +828,12 @@
                             </td>
 
                             <td>
-                              <button class="btn btn-sm btn-primary text-white">
-                                Edit
+                              <button
+                                class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                              >
+                                <span>Edit</span>
                                 <i
-                                  class="fas fa-pencil-alt"
+                                  class="fas fa-pencil-alt ms-1"
                                   style="font-size: 10px"
                                 ></i>
                               </button>
@@ -836,8 +845,10 @@
                             <td>Shamseer</td>
                             <td>(+91) 9876543210</td>
                             <td>
-                              Akshya Nagar, 1st Block 1st Cross, Rammurthy
-                              nagar, Ba...
+                              <p class="text-truncate" style="width: 200px">
+                                Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                nagar, Ba...
+                              </p>
                             </td>
                             <td>03-07-2022</td>
 
@@ -850,10 +861,12 @@
                             </td>
 
                             <td>
-                              <button class="btn btn-sm btn-primary text-white">
-                                Edit
+                              <button
+                                class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                              >
+                                <span>Edit</span>
                                 <i
-                                  class="fas fa-pencil-alt"
+                                  class="fas fa-pencil-alt ms-1"
                                   style="font-size: 10px"
                                 ></i>
                               </button>
@@ -866,7 +879,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-lg-3 stretch-card">
                 <div class="card border-0">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
@@ -899,6 +912,231 @@
                         </tbody>
                       </table>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4 gx-5 gy-4">
+              <div class="col-lg-4">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <h4 class="card-title mb-0">New Added Vendors</h4>
+                    </div>
+
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <thead class="bg-light">
+                          <tr>
+                            <th>S.No</th>
+                            <th>Customer Name</th>
+                            <th>Mobile.No</th>
+                            <th>Vendor Id</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>01</td>
+                            <td>Shamseer</td>
+                            <td>(+91) 9876543210</td>
+                            <td>VID00045</td>
+                          </tr>
+                          <tr>
+                            <td>02</td>
+                            <td>Shamseer</td>
+                            <td>(+91) 9876543210</td>
+                            <td>VID00045</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <h4 class="card-title mb-0">New Added Influencers</h4>
+                    </div>
+
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <thead class="bg-light">
+                          <tr>
+                            <th>S.No</th>
+                            <th>Customer Name</th>
+                            <th>Mobile.No</th>
+                            <th>Vendor Id</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>01</td>
+                            <td>Shamseer</td>
+                            <td>(+91) 9876543210</td>
+                            <td>VID00045</td>
+                          </tr>
+                          <tr>
+                            <td>02</td>
+                            <td>Shamseer</td>
+                            <td>(+91) 9876543210</td>
+                            <td>VID00045</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <h4 class="card-title mb-0">Last search Term</h4>
+                    </div>
+
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <img
+                                src="images/product-image.png"
+                                alt="product image"
+                                class="table__product__image mt-0"
+                              />
+                            </td>
+                            <td>Black shoe</td>
+                            <td>
+                              <button class="btn btn-success btn-sm text-white">
+                                View
+                                <i
+                                  class="fa fa-eye"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <img
+                                src="images/product-image.png"
+                                alt="product image"
+                                class="table__product__image mt-0"
+                              />
+                            </td>
+                            <td>Black shoe</td>
+                            <td>
+                              <button class="btn btn-success btn-sm text-white">
+                                View
+                                <i
+                                  class="fa fa-eye"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4 gx-5 gy-4">
+              <div class="col-lg-6">
+                <div class="card border-0">
+                  <div class="card-body p-3 p-lg-4">
+                    <div class="d-lg-flex align-items-center">
+                      <h4 class="card-title mb-3 mb-lg-0">
+                        Best Selling Products
+                      </h4>
+
+                      <div class="d-flex align-items-stretch ms-lg-auto">
+                        <input
+                          type="text"
+                          name="daterange"
+                          value="01/01/2021 - 01/15/2022"
+                          class="ms-auto bg-light border-0 p-2 w-100"
+                        />
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <thead class="bg-light">
+                          <tr>
+                            <th>Product Name</th>
+                            <th>Image</th>
+                            <th>Product Code</th>
+                            <th>Sales (pcs)</th>
+                            <th>Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <h6 class="mb-1">Sports shoe</h6>
+                            </td>
+                            <td>
+                              <img
+                                src="images/product-image.png"
+                                alt="product image"
+                                class="table__product__image mt-0"
+                              />
+                            </td>
+                            <td>SKU12457</td>
+                            <td>1289</td>
+                            <td>3.25 KWD</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <h6 class="mb-1">Sports shoe</h6>
+                            </td>
+                            <td>
+                              <img
+                                src="images/product-image.png"
+                                alt="product image"
+                                class="table__product__image mt-0"
+                              />
+                            </td>
+                            <td>SKU12457</td>
+                            <td>1289</td>
+                            <td>3.25 KWD</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-lg-flex align-items-center mb-3">
+                      <h4 class="card-title mb-lg-0">Conversion Rate</h4>
+
+                      <div
+                        class="d-flex align-items-center ms-auto mb-2 mb-lg-0"
+                      >
+                        <button
+                          class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <canvas id="areaChart" height="100"></canvas>
                   </div>
                 </div>
               </div>
