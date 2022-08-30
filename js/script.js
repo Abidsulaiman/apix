@@ -12,4 +12,24 @@ $(function () {
       );
     }
   );
+
+  $(".dropdown__menu").click(() => {
+    if ($("ul.aside__sub__nav").hasClass("d-none")) {
+      $("ul.aside__sub__nav").removeClass("d-none");
+      $("ul.aside__sub__nav").addClass("d-block");
+    } else {
+      $("ul.aside__sub__nav").addClass("d-none");
+      $("ul.aside__sub__nav").removeClass("d-block");
+    }
+  });
+
+  if ($(".dropdown__menu").hasClass("active")) {
+    $("ul.aside__sub__nav").removeClass("d-none");
+    $("ul.aside__sub__nav").addClass("d-block");
+    console.log("hi");
+  } else {
+    $("ul.aside__sub__nav").addClass("d-none");
+    $("ul.aside__sub__nav").removeClass("d-block");
+    console.log("hello");
+  }
 });

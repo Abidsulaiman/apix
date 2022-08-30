@@ -1,4 +1,55 @@
 /* common */
+.nav-search {
+  border-bottom: 1px solid rgb(220, 220, 220) !important;
+}
+.nav-search:focus-within {
+  border-bottom: 1px solid #7d6be7 !important;
+}
+.nav-search input {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0;
+}
+.nav-search .input-group-append .input-group-text,
+.nav-search .input-group-prepend .input-group-text {
+  border: none;
+  background: none;
+}
+.filter__btn {
+  border: 1px solid rgb(220, 220, 220);
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #c5c5c5;
+}
+.filter__btn:hover {
+  border: 1px solid #7d6be7;
+  color: #7d6be7;
+}
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.form-check {
+  min-height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-switch .form-check-input {
+  width: 3em;
+  height: 1.6em;
+  margin-top: 0;
+  margin-left: 0;
+}
+.form-check-input:checked {
+  background-color: #a394fd;
+  border-color: #a394fd;
+}
 label {
   margin-bottom: 10px;
 }
@@ -31,11 +82,16 @@ label {
 .border-purple {
   border-color: #a394fd !important;
 }
+.border-light {
+  border-color: #cfcfcf !important;
+}
 .text-purple {
   color: #a394fd;
 }
-.badge {
-  font-size: 10px;
+.image__container {
+  min-height: 200px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 .table thead th {
   color: #c5c5c5;
@@ -44,21 +100,23 @@ label {
 }
 .table td,
 .table td p,
-.table td h6 {
-  font-size: 10px;
+.table td h6,
+.table .btn {
+  font-size: 75%;
+}
+.badge {
+  font-size: 85%;
 }
 .table__border__radius {
   border-radius: 12px;
 }
-.table .btn {
-  font-size: 10px;
-}
 .form-control {
+  border: 1px solid #c6c6c6;
   border-radius: 0.25rem !important;
 }
 /* select */
 .select2-container--default .select2-selection--single {
-  border: 1px solid #f3f3f3;
+  border: 1px solid #c6c6c6;
   height: 40px;
 }
 .select2-container--default
@@ -238,6 +296,21 @@ label {
   border: 2px dashed #7d6be7;
   color: #7d6be7;
   border-radius: 10px;
+}
+
+aside nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 40px;
+}
+
+aside nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+aside nav ul li:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 @media (min-width: 992px) {
