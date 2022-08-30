@@ -56,6 +56,22 @@ label {
 .form-control {
   border-radius: 0.25rem !important;
 }
+/* select */
+.select2-container--default .select2-selection--single {
+  border: 1px solid #f3f3f3;
+  height: 40px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 40px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 1px;
+  height: 40px;
+}
 
 /* navbar */
 .navbar .navbar-brand-wrapper {

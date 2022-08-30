@@ -7,15 +7,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Catalogue Management</title>
+    <title>Attribute Management</title>
     <!-- plugins:css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
     <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.16.2/tagify.min.css"
     />
     <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css" />
     <link
@@ -249,10 +249,11 @@
                 <span class="menu-title d-none">Catalogue</span>
               </a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="attribute.html">
                 <i class="fa fa-box-open menu-icon"></i>
-                <span class="menu-title d-none">Order list</span>
+                <span class="menu-title d-none">Attribute</span>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -289,7 +290,7 @@
                       <nav>
                         <a
                           href="catalogue.html"
-                          class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav active"
+                          class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
                         >
                           <span>Category Management</span>
                           <i
@@ -299,7 +300,7 @@
                         </a>
                         <a
                           href="attribute.html"
-                          class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
+                          class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav active"
                         >
                           <span>Attribute Management</span>
                           <i
@@ -330,209 +331,182 @@
                       </nav>
                     </div>
                   </div>
+
+                  <div class="card mt-4">
+                    <div class="card-body">
+                      <h5 class="mb-4">Attribute Group Name</h5>
+
+                      <input type="text" class="form-control w-100" />
+
+                      <button class="btn bg-purple text-white py-2 mt-4">
+                        Add
+                      </button>
+                    </div>
+                  </div>
                 </aside>
               </div>
 
               <div class="col-lg-9">
                 <div class="card">
                   <div class="card-body">
-                    <div class="row">
-                      <div class="col-lg-5">
-                        <h4 class="font-bold text-secondary mb-4">
-                          Add new category
-                        </h4>
-
-                        <div class="d-flex flex-column gap-4">
-                          <div>
-                            <label>Category Name</label>
-                            <input type="text" class="form-control w-100" />
-                          </div>
-                          <div>
-                            <label>Description</label>
-                            <textarea
-                              class="form-control w-100"
-                              rows="6"
-                            ></textarea>
-                          </div>
-                          <div>
-                            <label>Meta Tag Title</label>
-                            <input type="text" class="form-control w-100" />
-                          </div>
-                          <div>
-                            <label>Meta Tag Description</label>
-                            <textarea
-                              class="form-control w-100"
-                              rows="6"
-                            ></textarea>
-                          </div>
-                          <div>
-                            <label>Meta Tag Keywords</label>
-                            <input
-                              name="input-custom-dropdown"
-                              class="w-100 rounded-2"
-                              placeholder="write some tags"
-                              value="css, html, javascript"
-                            />
-                          </div>
-                          <div>
-                            <label>Image</label>
-                            <button
-                              for="image"
-                              class="add__new__image__btn bg-white w-100 px-4 py-3 text-center"
-                              data-bs-toggle="modal"
-                              data-bs-target="#exampleModal"
+                    <div
+                      class="attr__form border border-secondary rounded-3 overflow-hidden"
+                    >
+                      <div class="attr__form__header bg-light px-3 py-3">
+                        <h6 class="text-uppercase mb-0">Create attribute</h6>
+                      </div>
+                      <div class="attr__form__body px-3 py-4">
+                        <div class="row">
+                          <div class="col-lg-6 d-flex align-items-center">
+                            <label class="w-50 mb-0 text-secondary"
+                              >Attribute Name</label
                             >
-                              + Add new image
-                            </button>
+                            <input type="text" class="form-control" />
                           </div>
-                          <div>
-                            <label class="w-100"> Status </label>
-                            <div class="d-flex gap-4 align-items-center">
-                              <div class="form-check">
-                                <label class="form-check-label">
-                                  <input
-                                    type="radio"
-                                    class="form-check-input"
-                                    name="membershipRadios"
-                                    id="membershipRadios1"
-                                    value=""
-                                    checked="" />
-                                  Active
-                                  <i class="input-helper"></i
-                                ></label>
-                              </div>
-
-                              <div class="form-check">
-                                <label class="form-check-label">
-                                  <input
-                                    type="radio"
-                                    class="form-check-input"
-                                    name="membershipRadios"
-                                    id="membershipRadios2"
-                                    value=""
-                                    checked="" />
-                                  In active
-                                  <i class="input-helper"></i
-                                ></label>
-                              </div>
-                            </div>
+                          <div class="col-lg-6 d-flex align-items-center">
+                            <label class="w-50 mb-0 text-secondary"
+                              >Attribute Code</label
+                            >
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="col-lg-12 d-flex align-items-center mt-4">
+                            <label class="w-25 mb-0 text-secondary"
+                              >Attribute Group Name</label
+                            >
+                            <select
+                              class="js-example-basic-single w-100"
+                              name="state"
+                            >
+                              <option value="AL">Alabama</option>
+                              <option value="WY">Wyoming</option>
+                              <option value="AL">Alabama</option>
+                              <option value="WY">Wyoming</option>
+                            </select>
                           </div>
                           <div
-                            class="d-flex align-items-center justify-content-center gap-4"
+                            class="col-lg-12 d-flex justify-content-end gap-3 mt-4"
                           >
-                            <button
-                              class="btn btn-success text-white py-2 rounded-3"
-                            >
-                              Save
+                            <button class="btn btn-success btn-sm text-white">
+                              Save changes
                             </button>
-                            <button
-                              class="btn btn-danger text-white py-2 rounded-3"
-                            >
+                            <button class="btn btn-outline-danger btn-sm">
                               Cancel
                             </button>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-7">
-                        <div
-                          class="table-responsive table__border__radius mt-3"
-                        >
-                          <table class="table">
-                            <thead class="bg-light">
-                              <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Products</th>
-                                <th>Status</th>
-                                <th>Total Sales</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>01</td>
-                                <td>Category name</td>
-                                <td>25</td>
+                    </div>
 
-                                <td>
-                                  <label
-                                    class="badge text-success rounded-2 bg-success-light"
-                                  >
-                                    Active
-                                  </label>
-                                </td>
-                                <td>2156</td>
-                                <td>
-                                  <button
-                                    class="btn btn-sm bg-purple text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-eye"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                  <button
-                                    class="btn btn-sm btn-secondary text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-pencil"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                  <button
-                                    class="btn btn-sm btn-danger text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-times"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>02</td>
-                                <td>Category name</td>
-                                <td>25</td>
+                    <hr class="my-5 bg-secondary" />
 
-                                <td>
-                                  <label
-                                    class="badge text-danger rounded-2 bg-danger-light"
-                                  >
-                                    In active
-                                  </label>
-                                </td>
-                                <td>2156</td>
-                                <td>
-                                  <button
-                                    class="btn btn-sm bg-purple text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-eye"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                  <button
-                                    class="btn btn-sm btn-secondary text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-pencil"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                  <button
-                                    class="btn btn-sm btn-danger text-white p-1"
-                                  >
-                                    <i
-                                      class="fa fa-times"
-                                      style="font-size: 10px"
-                                    ></i>
-                                  </button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
+                    <h5 class="font-bold mb-3">Attributes list</h5>
+
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <thead class="bg-light">
+                          <tr>
+                            <th>S.No</th>
+                            <th>Attribute Code</th>
+                            <th>Attribute Name</th>
+                            <th>Attribute Group</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td width="150 text-truncate">01</td>
+                            <td width="150 text-truncate">ATRCD0001</td>
+                            <td width="150 text-truncate">Attribute Name</td>
+                            <td>
+                              <span
+                                class="badge bg-light text-dark rounded-pill px-3"
+                                >Attribute Group</span
+                              >
+                              <span
+                                class="badge bg-light text-dark rounded-pill px-3"
+                                >Attribute Group</span
+                              >
+                              <span
+                                class="badge bg-light text-dark rounded-pill px-3"
+                                >Attribute Group</span
+                              >
+                              <span
+                                class="badge bg-light text-dark rounded-pill px-3"
+                                >Attribute Group</span
+                              >
+                            </td>
+                            <td>
+                              <button
+                                class="btn btn-sm bg-purple text-white p-1"
+                              >
+                                <i
+                                  class="fa fa-pencil"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                              <button
+                                class="btn btn-sm btn-danger text-white p-1"
+                              >
+                                <i
+                                  class="fa fa-times"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="150 text-truncate">01</td>
+                            <td width="150 text-truncate">ATRCD0001</td>
+                            <td width="150 text-truncate">Attribute Name</td>
+                            <td>
+                              <div class="d-flex flex-wrap gap-2">
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                                <span
+                                  class="badge bg-light text-dark rounded-pill px-3"
+                                  >Attribute Group</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <button
+                                class="btn btn-sm bg-purple text-white p-1"
+                              >
+                                <i
+                                  class="fa fa-pencil"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                              <button
+                                class="btn btn-sm btn-danger text-white p-1"
+                              >
+                                <i
+                                  class="fa fa-times"
+                                  style="font-size: 10px"
+                                ></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -606,7 +580,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.16.2/tagify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
@@ -616,219 +590,10 @@
     <script src="js/chart.js"></script>
     <script src="js/script.js"></script>
     <script>
-      var input = document.querySelector('input[name="input-custom-dropdown"]'),
-        // init Tagify script on the above inputs
-        tagify = new Tagify(input, {
-          whitelist: [
-            "A# .NET",
-            "A# (Axiom)",
-            "A-0 System",
-            "A+",
-            "A++",
-            "ABAP",
-            "ABC",
-            "ABC ALGOL",
-            "ABSET",
-            "ABSYS",
-            "ACC",
-            "Accent",
-            "Ace DASL",
-            "ACL2",
-            "Avicsoft",
-            "ACT-III",
-            "Action!",
-            "ActionScript",
-            "Ada",
-            "Adenine",
-            "Agda",
-            "Agilent VEE",
-            "Agora",
-            "AIMMS",
-            "Alef",
-            "ALF",
-            "ALGOL 58",
-            "ALGOL 60",
-            "ALGOL 68",
-            "ALGOL W",
-            "Alice",
-            "Alma-0",
-            "AmbientTalk",
-            "Amiga E",
-            "AMOS",
-            "AMPL",
-            "Apex (Salesforce.com)",
-            "APL",
-            "AppleScript",
-            "Arc",
-            "ARexx",
-            "Argus",
-            "AspectJ",
-            "Assembly language",
-            "ATS",
-            "Ateji PX",
-            "AutoHotkey",
-            "Autocoder",
-            "AutoIt",
-            "AutoLISP / Visual LISP",
-            "Averest",
-            "AWK",
-            "Axum",
-            "Active Server Pages",
-            "ASP.NET",
-            "B",
-            "Babbage",
-            "Bash",
-            "BASIC",
-            "bc",
-            "BCPL",
-            "BeanShell",
-            "Batch (Windows/Dos)",
-            "Bertrand",
-            "BETA",
-            "Bigwig",
-            "Bistro",
-            "BitC",
-            "BLISS",
-            "Blockly",
-            "BlooP",
-            "Blue",
-            "Boo",
-            "Boomerang",
-            "Bourne shell (including bash and ksh)",
-            "BREW",
-            "BPEL",
-            "B",
-            "C--",
-            "C++ – ISO/IEC 14882",
-            "C# – ISO/IEC 23270",
-            "C/AL",
-            "Caché ObjectScript",
-            "C Shell",
-            "Caml",
-            "Cayenne",
-            "CDuce",
-            "Cecil",
-            "Cesil",
-            "Céu",
-            "Ceylon",
-            "CFEngine",
-            "CFML",
-            "Cg",
-            "Ch",
-            "Chapel",
-            "Charity",
-            "Charm",
-            "Chef",
-            "CHILL",
-            "CHIP-8",
-            "chomski",
-            "ChucK",
-            "CICS",
-            "Cilk",
-            "Citrine (programming language)",
-            "CL (IBM)",
-            "Claire",
-            "Clarion",
-            "Clean",
-            "Clipper",
-            "CLIPS",
-            "CLIST",
-            "Clojure",
-            "CLU",
-            "CMS-2",
-            "COBOL – ISO/IEC 1989",
-            "CobolScript – COBOL Scripting language",
-            "Cobra",
-            "CODE",
-            "CoffeeScript",
-            "ColdFusion",
-            "COMAL",
-            "Combined Programming Language (CPL)",
-            "COMIT",
-            "Common Intermediate Language (CIL)",
-            "Common Lisp (also known as CL)",
-            "COMPASS",
-            "Component Pascal",
-            "Constraint Handling Rules (CHR)",
-            "COMTRAN",
-            "Converge",
-            "Cool",
-            "Coq",
-            "Coral 66",
-            "Corn",
-            "CorVision",
-            "COWSEL",
-            "CPL",
-            "CPL",
-            "Cryptol",
-            "csh",
-            "Csound",
-            "CSP",
-            "CUDA",
-            "Curl",
-            "Curry",
-            "Cybil",
-            "Cyclone",
-            "Cython",
-            "Java",
-            "Javascript",
-            "M2001",
-            "M4",
-            "M#",
-            "Machine code",
-            "MAD (Michigan Algorithm Decoder)",
-            "MAD/I",
-            "Magik",
-            "Magma",
-            "make",
-            "Maple",
-            "MAPPER now part of BIS",
-            "MARK-IV now VISION:BUILDER",
-            "Mary",
-            "MASM Microsoft Assembly x86",
-            "MATH-MATIC",
-            "Mathematica",
-            "MATLAB",
-            "Maxima (see also Macsyma)",
-            "Max (Max Msp – Graphical Programming Environment)",
-            "Maya (MEL)",
-            "MDL",
-            "Mercury",
-            "Mesa",
-            "Metafont",
-            "Microcode",
-            "MicroScript",
-            "MIIS",
-            "Milk (programming language)",
-            "MIMIC",
-            "Mirah",
-            "Miranda",
-            "MIVA Script",
-            "ML",
-            "Model 204",
-            "Modelica",
-            "Modula",
-            "Modula-2",
-            "Modula-3",
-            "Mohol",
-            "MOO",
-            "Mortran",
-            "Mouse",
-            "MPD",
-            "Mathcad",
-            "MSIL – deprecated name for CIL",
-            "MSL",
-            "MUMPS",
-            "Mystic Programming L",
-          ],
-          maxTags: 10,
-          dropdown: {
-            maxItems: 20, // <- mixumum allowed rendered suggestions
-            classname: "tags-look", // <- custom classname for this dropdown, so it could be targeted
-            enabled: 0, // <- show suggestions on focus
-            closeOnSelect: false, // <- do not hide the suggestions dropdown once an item has been selected
-          },
-        });
+      // In your Javascript (external .js resource or <script> tag)
+      $(document).ready(function () {
+        $(".js-example-basic-single").select2();
+      });
     </script>
     <!-- End custom js for this page-->
 
