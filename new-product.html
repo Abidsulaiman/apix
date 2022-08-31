@@ -360,7 +360,7 @@
               </div>
 
               <div class="col-lg-9">
-                <div class="card">
+                <div class="card fixed__card">
                   <div class="card-body">
                     <div class="d-flex align-items-center">
                       <div class="form-check d-flex align-items-center">
@@ -645,6 +645,254 @@
                         />
                       </div>
                     </div>
+
+                    <div
+                      class="table-responsive rounded-3 mt-4 overflow-hidden border border-light"
+                    >
+                      <table class="table table-bordered">
+                        <thead class="bg-light">
+                          <th class="p-3 text-dark text-center">
+                            Upsell Products
+                          </th>
+                          <th class="p-3 text-dark text-center">
+                            Cross sell Products
+                          </th>
+                          <th class="p-3 text-dark text-center">
+                            Related Products
+                          </th>
+                          <th class="p-3 text-dark text-center">Actions</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="p-4 text-center">14 Products</td>
+                            <td class="p-4 text-center">08 Products</td>
+                            <td class="p-4 text-center">27 Products</td>
+                            <td class="p-4">
+                              <button
+                                class="btn btn-sm bg-light shadow-sm text-secondary d-flex align-items-center gap-2 mx-auto"
+                              >
+                                <i
+                                  class="fas fa-edit"
+                                  style="font-size: 12px"
+                                ></i>
+                                <span class="fs-12">Edit</span>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="my-5 d-flex align-items-center gap-4">
+                      <h5 class="mb-0">Set Product As</h5>
+                      <select class="form-select-sm" style="width: 100px">
+                        <option value="newOne">New one</option>
+                      </select>
+
+                      <h5 class="mb-0 ms-auto">Stock Management</h5>
+                      <select class="form-select-sm">
+                        <option value="newOne">Product level management</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <h5>Product Type</h5>
+                      <div class="d-flex align-items-center gap-3 mt-3">
+                        <div
+                          class="form-check d-flex align-items-center gap-3 ms-4"
+                        >
+                          <input
+                            class="form-check-input ms-0 m-0"
+                            type="radio"
+                            name="productType"
+                            id="simpleProduct"
+                          />
+                          <label
+                            class="form-check-label mb-0 ms-0"
+                            for="simpleProduct"
+                          >
+                            Simple product
+                          </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-3">
+                          <input
+                            class="form-check-input ms-0 m-0"
+                            type="radio"
+                            name="productType"
+                            id="variableProduct"
+                            checked
+                          />
+                          <label
+                            class="form-check-label mb-0 ms-0"
+                            for="variableProduct"
+                          >
+                            Variable product
+                          </label>
+                        </div>
+
+                        <span
+                          class="d-inline-flex align-items-center bg-light px-2 py-2"
+                        >
+                          <i class="fa fa-info-circle fs-12 text-secondary"></i>
+                          <span class="ms-2 text-secondary fs-12"
+                            >Select an option for this product and then select
+                            choices of each option.
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="mt-5">
+                        <div class="d-flex align-items-center gap-4">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="Size"
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="Medium, Large"
+                          />
+                          <button class="btn btn-sm shadow-sm text-dark">
+                            <i class="fa fa-plus-circle fs-12"></i>
+                          </button>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-4 mt-4">
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="Color"
+                          />
+                          <input
+                            type="text"
+                            class="form-control"
+                            value="Black, White"
+                          />
+                          <button class="btn btn-sm shadow-sm text-dark">
+                            <i class="fa fa-trash-alt fs-12"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div
+                        class="table-responsive rounded-3 mt-4 overflow-hidden border border-light"
+                      >
+                        <table class="table table-bordered">
+                          <thead class="bg-light">
+                            <th class="p-3 text-dark text-center">
+                              Varient Name
+                            </th>
+                            <th class="p-3 text-dark text-center">
+                              Varient Price
+                            </th>
+                            <th class="p-3 text-dark text-center">Stock</th>
+                            <th class="p-3 text-dark text-center">SKU</th>
+                            <th class="p-3 text-dark text-center">Image</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="p-4 text-center">
+                                <span class="d-block mb-1">Varient:</span>
+                                <span>Medium Black</span>
+                              </td>
+                              <td class="p-4 text-center">
+                                <input
+                                  type="text"
+                                  class="form-control px-2 py-2"
+                                />
+                              </td>
+                              <td class="p-4 text-center">
+                                <select class="form-select-sm">
+                                  <option value="inStock">In stock</option>
+                                  <option value="inStock">In stock</option>
+                                </select>
+                              </td>
+                              <td class="p-4">
+                                <input
+                                  type="text"
+                                  class="form-control px-2 py-2"
+                                />
+                              </td>
+                              <td class="text-center">
+                                <input
+                                  type="file"
+                                  class="d-none"
+                                  id="browseFile1"
+                                />
+                                <label
+                                  for="browseFile1"
+                                  class="btn btn-light fs-12 rounded-3 py-2"
+                                >
+                                  Browse
+                                </label>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="p-4 text-center">
+                                <span class="d-block mb-1">Varient:</span>
+                                <span>Medium Black</span>
+                              </td>
+                              <td class="p-4 text-center">
+                                <input
+                                  type="text"
+                                  class="form-control px-2 py-2"
+                                />
+                              </td>
+                              <td class="p-4 text-center">
+                                <select class="form-select-sm">
+                                  <option value="inStock">In stock</option>
+                                  <option value="inStock">In stock</option>
+                                </select>
+                              </td>
+                              <td class="p-4">
+                                <input
+                                  type="text"
+                                  class="form-control px-2 py-2"
+                                />
+                              </td>
+                              <td class="text-center">
+                                <div class="mb-3">
+                                  <input
+                                    type="file"
+                                    class="d-none"
+                                    id="browseFile"
+                                  />
+                                  <label
+                                    for="browseFile"
+                                    class="btn btn-light fs-12 rounded-3 py-2"
+                                  >
+                                    Browse
+                                  </label>
+                                </div>
+                                <img
+                                  src="/images/product-image.png"
+                                  style="
+                                    width: 100px;
+                                    height: 100px;
+                                    object-fit: cover;
+                                  "
+                                  alt=""
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center gap-3 justify-content-center position-sticky shadow-lg bg-white w-100 py-4"
+                    style="left: 0; bottom: 0"
+                  >
+                    <button class="btn btn-success text-white btn-sm py-2">
+                      Save changes
+                    </button>
+                    <button class="btn btn-danger text-white btn-sm py-2">
+                      Cancel
+                    </button>
                   </div>
                 </div>
               </div>

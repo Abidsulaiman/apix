@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Product Management</title>
+    <title>APIX admin dashboard</title>
     <!-- plugins:css -->
     <link
       rel="stylesheet"
@@ -239,6 +239,7 @@
                 <span class="menu-title d-none">Dashboard</span>
               </a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="catalogue.html">
                 <i class="fa fa-layer-group menu-icon"></i>
@@ -246,9 +247,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="attribute.html">
                 <i class="fa fa-box-open menu-icon"></i>
-                <span class="menu-title d-none">Order list</span>
+                <span class="menu-title d-none">Attribute</span>
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -277,233 +278,123 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row gx-4">
-              <div class="col-lg-3">
-                <aside>
-                  <div class="card">
-                    <div class="card-body">
-                      <nav>
-                        <div>
-                          <a
-                            href="catalogue.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
-                          >
-                            <span>Category Management</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </a>
-                        </div>
-                        <div>
-                          <a
-                            href="attribute.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
-                          >
-                            <span>Attribute Management</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </a>
-                        </div>
-                        <div>
-                          <a
-                            href="brands.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
-                          >
-                            <span>Brands</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </a>
-                        </div>
+            <div class="card border-0">
+              <div class="card-body p-3 p-lg-4">
+                <h5 class="mb-4 bg-light px-3 py-3 rounded-3">
+                  Vendor Details
+                </h5>
 
-                        <div class="dropdown__menu">
-                          <button
-                            class="btn d-flex align-items-center w-100 py-4 cat__side__nav active"
-                          >
-                            <span>Product Management</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </button>
-                          <ul class="aside__sub__nav d-none">
-                            <li>
-                              <a
-                                class="cat__side__nav active"
-                                href="product-list.html"
-                              >
-                                Product List
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                class="cat__side__nav"
-                                href="product-review.html"
-                              >
-                                Product Review
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div>
-                  </div>
-                </aside>
-              </div>
-
-              <div class="col-lg-9">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="font-bold text-secondary mb-4">
-                      Product Details
-                    </h4>
-
-                    <div class="table__filter d-flex align-items-center gap-3">
-                      <div class="nav-search">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="search">
-                              <i class="fa fa-search"></i>
-                            </span>
-                          </div>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search product"
-                            aria-label="search"
-                            aria-describedby="search"
-                          />
-                        </div>
+                <div class="table__filter d-flex align-items-center gap-3">
+                  <div class="nav-search">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="search">
+                          <i class="fa fa-search"></i>
+                        </span>
                       </div>
-                      <span class="fs-12">Show</span>
-                      <select class="fs-12">
-                        <option value="25">25</option>
-                        <option value="25">50</option>
-                        <option value="25">100</option>
-                      </select>
-                      <span class="fa fa-chevron-left fs-10 filter__btn"></span>
-                      <span
-                        class="fa fa-chevron-right fs-10 filter__btn"
-                      ></span>
-                      <span class="fa fa-filter fs-10 filter__btn"></span>
-
-                      <a
-                        href="new-product.html"
-                        class="btn bg-purple text-white btn-sm px-4 ms-auto"
-                      >
-                        Add new product
-                      </a>
-                    </div>
-
-                    <div class="table-responsive table__border__radius mt-3">
-                      <table class="table">
-                        <thead class="bg-light">
-                          <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Info</th>
-                            <th>Price</th>
-                            <th>Brand</th>
-                            <th class="text-center">Published</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Product name</td>
-                            <td>
-                              <p class="mb-0 block">Rating: 4.5</p>
-                              <span class="block">Total sales: 123</span>
-                            </td>
-                            <td>11.00 KWD</td>
-                            <td>Brand Name</td>
-                            <td>
-                              <div
-                                class="form-check form-switch d-flex align-items-center justify-content-center"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                />
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                class="bg-white text-success shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-eye fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-warning shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-copy fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-secondary shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-pencil fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-danger shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-times fs-10"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>Product name</td>
-                            <td>
-                              <p class="mb-0 block">Rating: 4.5</p>
-                              <span class="block">Total sales: 123</span>
-                            </td>
-                            <td>11.00 KWD</td>
-                            <td>Brand Name</td>
-                            <td>
-                              <div
-                                class="form-check form-switch d-flex align-items-center justify-content-center"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  checked
-                                />
-                              </div>
-                            </td>
-                            <td>
-                              <button
-                                class="bg-white text-success shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-eye fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-warning shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-copy fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-secondary shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-pencil fs-10"></i>
-                              </button>
-                              <button
-                                class="bg-white text-danger shadow-sm rounded-3 border-0 p-2"
-                              >
-                                <i class="fa fa-times fs-10"></i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search product"
+                        aria-label="search"
+                        aria-describedby="search"
+                      />
                     </div>
                   </div>
+                  <span class="fs-12">Show</span>
+                  <select class="fs-12">
+                    <option value="25">25</option>
+                    <option value="25">50</option>
+                    <option value="25">100</option>
+                  </select>
+                  <span class="fa fa-chevron-left fs-10 filter__btn"></span>
+                  <span class="fa fa-chevron-right fs-10 filter__btn"></span>
+                  <span class="fa fa-filter fs-10 filter__btn"></span>
+
+                  <a
+                    href="new-product.html"
+                    class="btn bg-purple text-white btn-sm px-4 ms-auto"
+                  >
+                    Add new vendor
+                  </a>
+                </div>
+
+                <div class="table-responsive table__border__radius mt-3">
+                  <table class="table">
+                    <thead class="bg-light">
+                      <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Mobile.No</th>
+                        <th>Vendor ID</th>
+                        <th>Address</th>
+                        <th>Enrolled On</th>
+                        <th>Status</th>
+                        <th>Sales</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01</td>
+                        <td>Shamseer</td>
+                        <td>+91-9876543210</td>
+                        <td>VID0048</td>
+                        <td class="text-truncate" width="300">
+                          Lorem ipsum dolor sit amet, qui minim labore
+                          adipisicing minim sint cillum sint consectetur
+                          cupidatat.
+                        </td>
+                        <td>03-07-22</td>
+                        <td>
+                          <label
+                            class="badge text-success rounded-2 bg-success-light fs-10"
+                          >
+                            active
+                          </label>
+                        </td>
+                        <td>59</td>
+                        <td>
+                          <button
+                            class="btn btn-sm btn-primary shadow-sm text-white d-flex align-items-center gap-2 mx-auto"
+                          >
+                            <span class="fs-12">Edit</span>
+
+                            <i class="fas fa-edit" style="font-size: 12px"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>01</td>
+                        <td>Shamseer</td>
+                        <td>+91-9876543210</td>
+                        <td>VID0048</td>
+                        <td class="text-truncate" width="300">
+                          Lorem ipsum dolor sit amet, qui minim labore
+                          adipisicing minim sint cillum sint consectetur
+                          cupidatat.
+                        </td>
+                        <td>03-07-22</td>
+                        <td>
+                          <label
+                            class="badge text-success rounded-2 bg-success-light fs-10"
+                          >
+                            active
+                          </label>
+                        </td>
+                        <td>59</td>
+                        <td>
+                          <button
+                            class="btn btn-sm btn-primary shadow-sm text-white d-flex align-items-center gap-2 mx-auto"
+                          >
+                            <span class="fs-12">Edit</span>
+
+                            <i class="fas fa-edit" style="font-size: 12px"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
