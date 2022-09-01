@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>APIX admin dashboard</title>
+    <title>Orders management</title>
     <!-- plugins:css -->
     <link
       rel="stylesheet"
@@ -247,7 +247,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="orders.html">
                 <i class="fa fa-box-open menu-icon"></i>
                 <span class="menu-title d-none">Orders</span>
               </a>
@@ -290,118 +290,136 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="card border-0">
-              <div class="card-body p-3 p-lg-4">
-                <h5 class="mb-4 bg-light px-3 py-3 rounded-3">
-                  Vendor Details
-                </h5>
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <h5>Orders list</h5>
 
-                <div class="table__filter d-flex align-items-center gap-3">
-                  <div class="nav-search">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="search">
-                          <i class="fa fa-search"></i>
-                        </span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Search product"
-                        aria-label="search"
-                        aria-describedby="search"
-                      />
-                    </div>
-                  </div>
-                  <span class="fs-12">Show</span>
-                  <select class="fs-12">
-                    <option value="25">25</option>
-                    <option value="25">50</option>
-                    <option value="25">100</option>
-                  </select>
-                  <span class="fa fa-chevron-left fs-10 filter__btn"></span>
-                  <span class="fa fa-chevron-right fs-10 filter__btn"></span>
-                  <span class="fa fa-filter fs-10 filter__btn"></span>
-
-                  <a
-                    href="new-vendor.html"
-                    class="btn bg-purple text-white btn-sm px-4 ms-auto"
+                  <div
+                    class="table__filter d-flex align-items-center gap-3 ms-auto"
                   >
-                    Add new vendor
-                  </a>
+                    <div class="nav-search">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="search">
+                            <i class="fa fa-search"></i>
+                          </span>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search product"
+                          aria-label="search"
+                          aria-describedby="search"
+                        />
+                      </div>
+                    </div>
+                    <span class="fs-12">Show</span>
+                    <select class="fs-12">
+                      <option value="25">25</option>
+                      <option value="25">50</option>
+                      <option value="25">100</option>
+                    </select>
+                    <span class="fa fa-chevron-left fs-10 filter__btn"></span>
+                    <span class="fa fa-chevron-right fs-10 filter__btn"></span>
+                    <span class="fa fa-filter fs-10 filter__btn"></span>
+                  </div>
                 </div>
 
                 <div class="table-responsive table__border__radius mt-3">
                   <table class="table">
                     <thead class="bg-light">
                       <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Mobile.No</th>
-                        <th>Vendor ID</th>
-                        <th>Address</th>
-                        <th>Enrolled On</th>
+                        <th>#</th>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Store Name</th>
+                        <th>Units</th>
+                        <th>Price</th>
+                        <th>payment</th>
                         <th>Status</th>
-                        <th>Sales</th>
-                        <th>Action</th>
+                        <th>Date</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>01</td>
-                        <td>Shamseer</td>
-                        <td>+91-9876543210</td>
-                        <td>VID0048</td>
-                        <td class="text-truncate" width="300">
-                          Lorem ipsum dolor sit amet, qui minim labore
-                          adipisicing minim sint cillum sint consectetur
-                          cupidatat.
-                        </td>
-                        <td>03-07-22</td>
+                        <td>#ID12457</td>
+                        <td>Haasim</td>
+                        <td>Riva Assima</td>
+                        <td>3</td>
+                        <td>1.50 KWD</td>
                         <td>
                           <label
-                            class="badge text-success rounded-2 bg-success-light fs-10"
+                            class="badge text-danger rounded-2 bg-danger-light"
                           >
-                            active
+                            Pending
                           </label>
                         </td>
-                        <td>59</td>
+                        <td>
+                          <label
+                            class="badge text-success rounded-2 bg-success-light"
+                          >
+                            Delivered
+                          </label>
+                        </td>
+                        <td>22 / 07 / 2022</td>
                         <td>
                           <button
-                            class="btn btn-sm btn-primary shadow-sm text-white d-flex align-items-center gap-2 mx-auto"
+                            class="btn btn-primary text-white rounded-3 p-2"
                           >
-                            <span class="fs-12">Edit</span>
-
-                            <i class="fas fa-edit" style="font-size: 12px"></i>
+                            <i class="fa fa-eye fs-10"></i>
+                          </button>
+                          <button
+                            class="btn btn-warning text-white rounded-3 p-2"
+                          >
+                            <i class="fa fa-print fs-10"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger text-white rounded-3 p-2"
+                          >
+                            <i class="fa fa-truck fs-10"></i>
                           </button>
                         </td>
                       </tr>
                       <tr>
                         <td>01</td>
-                        <td>Shamseer</td>
-                        <td>+91-9876543210</td>
-                        <td>VID0048</td>
-                        <td class="text-truncate" width="300">
-                          Lorem ipsum dolor sit amet, qui minim labore
-                          adipisicing minim sint cillum sint consectetur
-                          cupidatat.
-                        </td>
-                        <td>03-07-22</td>
+                        <td>#ID12457</td>
+                        <td>Haasim</td>
+                        <td>Riva Assima</td>
+                        <td>3</td>
+                        <td>1.50 KWD</td>
                         <td>
                           <label
-                            class="badge text-success rounded-2 bg-success-light fs-10"
+                            class="badge text-success rounded-2 bg-success-light"
                           >
-                            active
+                            Completed
                           </label>
                         </td>
-                        <td>59</td>
+                        <td>
+                          <label
+                            class="badge text-warning rounded-2 bg-warning-light"
+                          >
+                            Packed
+                          </label>
+                        </td>
+                        <td>22 / 07 / 2022</td>
                         <td>
                           <button
-                            class="btn btn-sm btn-primary shadow-sm text-white d-flex align-items-center gap-2 mx-auto"
+                            class="btn btn-primary text-white rounded-3 p-2"
                           >
-                            <span class="fs-12">Edit</span>
-
-                            <i class="fas fa-edit" style="font-size: 12px"></i>
+                            <i class="fa fa-eye fs-10"></i>
+                          </button>
+                          <button
+                            class="btn btn-warning text-white rounded-3 p-2"
+                          >
+                            <i class="fa fa-print fs-10"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger text-white rounded-3 p-2"
+                          >
+                            <i class="fa fa-truck fs-10"></i>
                           </button>
                         </td>
                       </tr>
