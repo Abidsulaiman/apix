@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Product Reviews</title>
+    <title>Bundle Offer</title>
     <!-- plugins:css -->
     <link
       rel="stylesheet"
@@ -269,22 +269,6 @@
                 <span class="menu-title d-none">Influencer</span>
               </a>
             </li>
-            <!-- <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="mdi mdi-account menu-icon"></i>
-              <span class="menu-title">User Pages</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
-              </ul>
-            </div>
-          </li> -->
           </ul>
         </nav>
         <div
@@ -303,10 +287,10 @@
                       <nav>
                         <div>
                           <a
-                            href="catalogue.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
+                            href="promotion.html"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav active"
                           >
-                            <span>Category Management</span>
+                            <span>Promotion Management</span>
                             <i
                               class="fa fa-chevron-right"
                               style="font-size: 10px"
@@ -315,57 +299,15 @@
                         </div>
                         <div>
                           <a
-                            href="attribute.html"
+                            href="bundle-offer.html"
                             class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
                           >
-                            <span>Attribute Management</span>
+                            <span>Bundle Offer</span>
                             <i
                               class="fa fa-chevron-right"
                               style="font-size: 10px"
                             ></i>
                           </a>
-                        </div>
-                        <div>
-                          <a
-                            href="brands.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
-                          >
-                            <span>Brands</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </a>
-                        </div>
-
-                        <div class="dropdown__menu">
-                          <button
-                            class="btn d-flex align-items-center w-100 py-4 cat__side__nav active"
-                          >
-                            <span>Product Management</span>
-                            <i
-                              class="fa fa-chevron-right"
-                              style="font-size: 10px"
-                            ></i>
-                          </button>
-                          <ul class="aside__sub__nav d-none">
-                            <li>
-                              <a
-                                class="cat__side__nav"
-                                href="product-list.html"
-                              >
-                                Product List
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                class="cat__side__nav active"
-                                href="product-review.html"
-                              >
-                                Product Review
-                              </a>
-                            </li>
-                          </ul>
                         </div>
                       </nav>
                     </div>
@@ -376,81 +318,147 @@
               <div class="col-lg-9">
                 <div class="card">
                   <div class="card-body">
-                    <div class="d-flex align-items-center gap-4">
-                      <h5 class="font-bold mb-4">Reviews</h5>
-                      <button
-                        class="btn btn-success text-white btn-sm d-flex align-items-center gap-2 ms-auto"
-                      >
-                        <i class="fa fa-check-circle fs-12"></i>
-                        <span>Approve</span>
-                      </button>
-                      <button
-                        class="btn btn-danger text-white btn-sm d-flex align-items-center gap-2"
-                      >
-                        <i class="fa fa-times-circle fs-12"></i>
-                        <span>Delete</span>
-                      </button>
+                    <h5>Basic Information</h5>
+
+                    <hr class="bg-secondary my-4" />
+
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <h6 class="mb-0">Promotion Condition:</h6>
+                      </div>
+                      <div class="col-3">
+                        <select class="form-select">
+                          <option value="">Multiple product</option>
+                        </select>
+                      </div>
                     </div>
 
-                    <div class="table-responsive table__border__radius mt-3">
-                      <table class="table">
+                    <div class="row align-items-center my-4">
+                      <div class="col-2">
+                        <h6 class="mb-0">Select products:</h6>
+                      </div>
+                      <div class="col-8">
+                        <input
+                          class="form-control"
+                          placeholder="Search product to add"
+                        />
+                      </div>
+                    </div>
+
+                    <div
+                      class="table-responsive rounded-3 mt-4 overflow-hidden border border-light"
+                    >
+                      <table class="table table-bordered">
                         <thead class="bg-light">
-                          <tr>
-                            <th>
-                              <div
-                                class="form-check d-flex align-items-center gap-2"
-                              >
-                                <input
-                                  class="form-check-input m-0"
-                                  type="checkbox"
-                                  id="allSelect"
-                                />
-                                <label
-                                  class="form-check-label m-0"
-                                  for="allSelect"
-                                >
-                                  All
-                                </label>
-                              </div>
-                            </th>
-                            <th>Author</th>
-                            <th>Product <small>(SKU)</small></th>
-                            <th>Content</th>
-                            <th>Date</th>
-                            <th>Action</th>
-                          </tr>
+                          <th class="p-3 text-dark text-center">#</th>
+                          <th class="p-3 text-dark text-center">
+                            Product Name
+                          </th>
+                          <th class="p-3 text-dark text-center">Image</th>
+                          <th class="p-3 text-dark text-center">Sku Code</th>
+                          <th class="p-3 text-dark text-center">Price</th>
+                          <th class="p-3 text-dark text-center">Action</th>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>
-                              <div
-                                class="form-check d-flex align-items-center gap-2"
-                              >
-                                <input
-                                  class="form-check-input m-0"
-                                  type="checkbox"
-                                />
-                              </div>
+                            <td class="p-4 text-center">01</td>
+                            <td class="p-4 text-center">Product name</td>
+                            <td class="p-4 text-center">
+                              <img
+                                src="/images/Product4.png"
+                                style="
+                                  object-fit: cover;
+                                  width: 150px !important;
+                                  height: 100px !important;
+                                  border-radius: 0px !important;
+                                "
+                                alt=""
+                              />
                             </td>
-                            <td>Shemseer</td>
-                            <td>SKUCD001</td>
-                            <td width="450">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim
-                            </td>
-                            <td>22 / 07 / 2022</td>
-                            <td>
+                            <td class="p-4 text-center">SKUCD0012</td>
+                            <td class="p-4 text-center">1.05 KWD</td>
+                            <td class="p-4">
                               <button
-                                class="btn btn-sm btn-warning text-white fs-10 d-flex align-items-center gap-2"
+                                class="btn btn-sm bg-white shadow-sm text-secondary d-flex align-items-center gap-2 mx-auto"
                               >
-                                <i class="fa fa-edit fs-10"></i>
-                                <span>Edit</span>
+                                <i
+                                  class="fas fa-times text-danger"
+                                  style="font-size: 12px"
+                                ></i>
                               </button>
                             </td>
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+
+                    <hr class="bg-secondary my-4" />
+
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <h6 class="mb-0">Discount Details:</h6>
+                      </div>
+                      <div class="col-3">
+                        <select class="form-select">
+                          <option value="discountAmount">
+                            Discount Amount
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-2 ms-auto">
+                        <h6 class="mb-0">Enter Amount:</h6>
+                      </div>
+                      <div class="col-3">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="form-check d-flex align-items-center mt-4">
+                      <input
+                        class="form-check-input m-0"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        checked
+                      />
+                      <label
+                        class="form-check-label m-0 ms-2"
+                        for="flexCheckChecked"
+                      >
+                        Checked checkbox
+                      </label>
+                    </div>
+
+                    <hr class="my-4 bg-secondary" />
+
+                    <div class="d-flex align-items-center mb-4">
+                      <h5 class="mb-0">Schedule:</h5>
+                      <span class="fs-12 text-secondary ms-2"
+                        >( Use these settings to limit the coupon expiration
+                        date )</span
+                      >
+                    </div>
+
+                    <div class="row align-items-center gx-4">
+                      <div class="col-2">Start Date:</div>
+                      <div class="col-4">
+                        <input type="date" class="form-control" />
+                      </div>
+                      <div class="col-2">End Date:</div>
+                      <div class="col-4">
+                        <input type="date" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div
+                      class="d-flex align-items-center gap-2 justify-content-center mt-5"
+                    >
+                      <button class="btn btn-success text-white btn-sm px-4">
+                        Save
+                      </button>
+                      <button class="btn btn-outline-danger text-danger btn-sm">
+                        Cancel
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -463,6 +471,44 @@
         <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title mx-auto" id="exampleModalLabel">
+              Crop Image to proceed
+            </h5>
+          </div>
+          <div class="modal-body">
+            <img
+              src="https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/722561e6b86eafb7fc5017da6c3e18791453fc29df5b6f08ad40d15917e89937.png"
+              alt=""
+              class="w-100"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success py-2 text-white"
+              data-bs-dismiss="modal"
+            >
+              Save
+            </button>
+            <button type="button" class="btn btn-danger text-white py-2">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- container-scroller -->
 
