@@ -321,6 +321,11 @@ aside nav ul li:not(:last-child) {
   margin-bottom: 16px;
 }
 
+#vend_div,
+#infl_div {
+  z-index: 50;
+}
+
 @media (min-width: 992px) {
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
     color: #fff;
