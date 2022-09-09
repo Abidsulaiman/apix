@@ -308,80 +308,130 @@
                   Customer Details
                 </h5>
 
-                <div class="table__filter d-flex align-items-center gap-3">
-                  <div class="nav-search">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="search">
-                          <i class="fa fa-search"></i>
-                        </span>
+                <div class="row gx-4">
+                  <div class="col-lg-4 border-right border-light">
+                    <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-2">
+                            <img
+                              src="/images/avatar.webp"
+                              class="w-100 rounded-circle"
+                              width="100%"
+                              alt="avatar"
+                            />
+                          </div>
+                          <div class="col-10">
+                            <div
+                              class="d-flex align-items-center justify-content-between"
+                            >
+                              <h6>Customer name</h6>
+                              <button class="btn p-1 rounded shadow-sm">
+                                <i class="fa fa-edit text-secondary fs-12"></i>
+                              </button>
+                            </div>
+                            <p>customermail2gmail.com</p>
+                            <p>+91-9876543210</p>
+                          </div>
+                        </div>
+
+                        <hr class="bg-secondary" />
+
+                        <textarea
+                          placeholder="Customer Notes"
+                          class="form-control"
+                          rows="5"
+                        ></textarea>
                       </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Search product"
-                        aria-label="search"
-                        aria-describedby="search"
-                      />
+                    </div>
+
+                    <div class="card mt-4 border-0 shadow-sm">
+                      <div class="card-body">
+                        <h6 class="mb-4">Address Details</h6>
+
+                        <h6 class="mb-0">Home</h6>
+                        <p class="p-2">
+                          Akshya Nagar, 1st Block 1st Cross, Rammurthy nagar,
+                          Banglore Karnataka - 521521
+                        </p>
+
+                        <h6 class="mb-0">Home 2</h6>
+                        <p class="p-2">
+                          Akshya Nagar, 1st Block 1st Cross, Rammurthy nagar,
+                          Banglore Karnataka - 521521
+                        </p>
+
+                        <h6 class="mb-0">Home 3</h6>
+                        <p class="p-2 mb-0">
+                          Akshya Nagar, 1st Block 1st Cross, Rammurthy nagar,
+                          Banglore Karnataka - 521521
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <span class="fs-12">Show</span>
-                  <select class="fs-12">
-                    <option value="25">25</option>
-                    <option value="25">50</option>
-                    <option value="25">100</option>
-                  </select>
-                  <span class="fa fa-chevron-left fs-10 filter__btn"></span>
-                  <span class="fa fa-chevron-right fs-10 filter__btn"></span>
-                  <span class="fa fa-filter fs-10 filter__btn"></span>
+                  <div class="col-lg-8">
+                    <div class="table__filter d-flex align-items-center gap-3">
+                      <h5 class="mb-0 me-auto">Order Details</h5>
+                      <div class="nav-search">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="search">
+                              <i class="fa fa-search"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search product"
+                            aria-label="search"
+                            aria-describedby="search"
+                          />
+                        </div>
+                      </div>
+                      <span class="fs-12">Show</span>
+                      <select class="fs-12">
+                        <option value="25">25</option>
+                        <option value="25">50</option>
+                        <option value="25">100</option>
+                      </select>
+                      <span class="fa fa-chevron-left fs-10 filter__btn"></span>
+                      <span
+                        class="fa fa-chevron-right fs-10 filter__btn"
+                      ></span>
+                      <span class="fa fa-filter fs-10 filter__btn"></span>
+                    </div>
 
-                  <a
-                    href="new-customer.html"
-                    class="btn bg-purple text-white btn-sm ms-auto"
-                  >
-                    Add new Customer
-                  </a>
-                </div>
-
-                <div class="table-responsive table__border__radius mt-3">
-                  <table class="table">
-                    <thead class="bg-light">
-                      <tr>
-                        <th>S.No</th>
-                        <th>Cust ID</th>
-                        <th>Name</th>
-                        <th>Mail ID</th>
-                        <th>Mobile.No</th>
-                        <th>Country</th>
-                        <th>Sales</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>01</td>
-                        <td>CUS048</td>
-                        <td>Shamseer</td>
-                        <td>sampleemail@gmail.com</td>
-                        <td>+91-9876543210</td>
-                        <td>kuwait</td>
-                        <td>65</td>
-                        <td>
-                          <a
-                            href="customer-details.html"
-                            class="btn btn-sm bg-white shadow-sm text-secondary"
-                          >
-                            <i class="fas fa-edit" style="font-size: 12px"></i>
-                          </a>
-                          <button
-                            class="btn btn-sm bg-white shadow-sm text-danger"
-                          >
-                            <i class="fas fa-times" style="font-size: 12px"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <div class="table-responsive table__border__radius mt-3">
+                      <table class="table">
+                        <thead class="bg-light">
+                          <tr>
+                            <th>#</th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>01</td>
+                            <td>#OD4048</td>
+                            <td>29-09-2021</td>
+                            <td>10:00 AM</td>
+                            <td>
+                              <span class="badge bg-warning text-white"
+                                >Pending</span
+                              >
+                            </td>
+                            <td>6 Items</td>
+                            <td>32 KWD</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
