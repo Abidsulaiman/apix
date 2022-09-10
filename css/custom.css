@@ -196,7 +196,12 @@ label {
 .sidebar .logo__wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   grid-gap: 10px;
+  padding: 14px;
+}
+.sidebar.not-collapsed .logo__wrapper {
+  justify-content: start;
 }
 .sidebar .brand__logo {
   width: 46px;
@@ -213,8 +218,9 @@ label {
   height: 0;
   z-index: 1039;
 }
-.sidebar-icon-only .sidebar__backdrop {
-  display: block;
+.sidebar-icon-only .navbar,
+.sidebar-icon-only .main-panel {
+  margin-left: 70px;
 }
 
 .sidebar .nav:not(.sub-menu) {
@@ -224,8 +230,10 @@ label {
 .sidebar .nav-item {
   opacity: 0.5;
 }
-.sidebar .nav-item.active {
+.sidebar .nav-item.active,
+.sidebar .nav-item:hover {
   opacity: 1;
+  background: rgb(125, 107, 231) !important;
 }
 .sidebar .nav:not(.sub-menu) > .nav-item {
   border-bottom: none;
@@ -241,7 +249,6 @@ label {
 
 .sidebar .nav-link:hover {
   transition: all ease-in-out 0.3ms;
-  background: #7d6be7 !important;
 }
 
 .sidebar .nav .nav-item.active > .nav-link:hover i,
@@ -337,10 +344,11 @@ aside nav ul li:not(:last-child) {
   align-items: center;
   justify-content: center;
   grid-gap: 10px;
+  padding: 14px !important;
 }
 
 .sidebar-icon-only .sidebar.not-collapsed {
-  width: 170px;
+  width: 200px;
 }
 .sidebar-icon-only .sidebar.not-collapsed .logo-text {
   display: block;
@@ -363,6 +371,10 @@ aside nav ul li:not(:last-child) {
 
 @media (min-width: 992px) {
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
     color: #fff;
   }
   .sidebar-icon-only .navbar .navbar-brand-wrapper {
@@ -378,7 +390,17 @@ aside nav ul li:not(:last-child) {
     display: flex;
     flex-direction: column;
 
-    padding: 20px;
+    padding: 5px;
+  }
+
+  .sidebar-icon-only .navbar,
+  .sidebar-icon-only .main-panel {
+    margin-left: 100px;
+  }
+
+  .sidebar-text .navbar,
+  .sidebar-text .main-panel {
+    margin-left: 200px;
   }
 
   .sidebar-icon-only .sidebar__backdrop {
@@ -398,21 +420,20 @@ aside nav ul li:not(:last-child) {
 
 @media screen and (max-width: 991px) {
   .sidebar .nav:not(.sub-menu) {
-    max-height: 68vh;
+    max-height: 64vh;
     overflow-y: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .sidebar.not-collapsed .logo__wrapper {
     display: flex;
     align-items: center;
     grid-gap: 10px;
-    margin: 0 14px;
   }
   .sidebar .logo__wrapper {
     display: block;
     align-items: center;
     grid-gap: 10px;
-    margin: 0 14px;
+    margin: 0 auto;
   }
   .sidebar .brand__logo {
     width: 30px;
@@ -449,9 +470,11 @@ aside nav ul li:not(:last-child) {
   .sidebar-icon-only .sidebar #sidebarCollapseBtn {
     margin: 0 auto;
   }
+
   .sidebar-icon-only .sidebar.not-collapsed #sidebarCollapseBtn {
-    margin: 0 14px;
+    margin: 0 0;
   }
+
   .sidebar-icon-only .sidebar.not-collapsed .nav .nav-item .nav-link {
     display: block;
   }

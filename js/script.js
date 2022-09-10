@@ -25,5 +25,6 @@ $(function () {
 
   $("#sidebarCollapseBtn").click(() => {
     $(".sidebar-icon-only .sidebar").toggleClass("not-collapsed");
+    $(".sidebar-icon-only").toggleClass("sidebar-text");
   });
 });
