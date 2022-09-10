@@ -279,6 +279,12 @@
                 <span class="menu-title d-none">Customer</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user.html">
+                <i class="fa-solid fa-hospital-user menu-icon"></i>
+                <span class="menu-title d-none">User</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi-account menu-icon"></i>
@@ -296,6 +302,38 @@
             </div>
           </li> -->
           </ul>
+
+          <button class="btn p-0" id="sidebarCollapseBtn">
+            <svg
+              width="26"
+              height="20"
+              viewBox="0 0 29 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="28.6098" height="23" rx="2.80488" fill="white" />
+              <g clip-path="url(#clip0_127_108)">
+                <path
+                  d="M7.10547 16.4086H15.5201M7.10547 6.31104H15.5201H7.10547ZM7.10547 11.3598H22.0648H7.10547ZM22.0648 11.3598L19.2599 7.57323L22.0648 11.3598ZM22.0648 11.3598L19.2599 15.1464L22.0648 11.3598Z"
+                  stroke="#A394FD"
+                  stroke-width="1.68293"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_127_108">
+                  <rect
+                    width="16.8293"
+                    height="12.622"
+                    fill="white"
+                    transform="translate(6.17041 5.04883)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="d-none ms-2">Collapse</span>
+          </button>
         </nav>
         <div
           class="sidebar__backdrop"
@@ -309,10 +347,12 @@
               <div class="card-body">
                 <h4 class="bg-light px-2 py-1 rounded-3">Influencer Details</h4>
 
-                <div class="row gx-5 mt-4">
+                <div class="row gx-5 gy-4 mt-4">
                   <div class="col-lg-3 border-right border-light">
                     <h6>Influencer Image</h6>
-                    <div class="p-5 mb-4 mt-2 shadow-sm text-center rounded-3">
+                    <div
+                      class="p-lg-5 p-2 mb-4 mt-2 shadow-sm text-center rounded-3"
+                    >
                       <img
                         src="/images/avatar.webp"
                         class="rounded-circle"
@@ -323,7 +363,7 @@
 
                       <button
                         for="image"
-                        class="add__new__image__btn bg-white w-100 px-4 py-2 text-center mt-5"
+                        class="add__new__image__btn bg-white w-100 px-2 px-lg-4 py-2 text-center mt-lg-5 mt-3"
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                       >
@@ -339,7 +379,7 @@
                       </div>
 
                       <div class="p-4">
-                        <button class="btn btn-sm btn-success text-white">
+                        <button class="btn btn-sm btn-success text-white w-100">
                           Upload <i class="fa fa-upload fas-12"></i>
                         </button>
                         <input type="text" class="form-control mt-4" />
@@ -357,7 +397,7 @@
                     </div>
 
                     <div class="row gap-4 align-items-stretch mt-4">
-                      <div class="col">
+                      <div class="col-lg">
                         <label>Name</label>
                         <input
                           type="text"
@@ -365,7 +405,7 @@
                           placeholder="Name"
                         />
                       </div>
-                      <div class="col">
+                      <div class="col-lg">
                         <label>Business Group</label>
                         <select class="form-select">
                           <option value="business group">business group</option>
@@ -378,7 +418,7 @@
                     </div>
 
                     <div class="row align-items-center gap-4 mt-5">
-                      <h4 class="mb-0 col">Address Details</h4>
+                      <h4 class="mb-0 col-lg">Address Details</h4>
                       <div
                         class="col-9"
                         style="background: gainsboro; height: 1px"
@@ -386,7 +426,7 @@
                     </div>
 
                     <div class="row gx-4 gy-4 align-items-stretch mt-4">
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Country</label>
 
                         <select class="form-select">
@@ -394,7 +434,7 @@
                           <option value="india">India</option>
                         </select>
                       </div>
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Location</label>
 
                         <select class="form-select">
@@ -431,7 +471,7 @@
                         </div>
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Contact Number</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
@@ -452,7 +492,7 @@
                           />
                         </div>
                       </div>
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Mail Id</label>
                         <input
                           type="email"
@@ -461,7 +501,7 @@
                         />
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Website</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
@@ -475,10 +515,10 @@
                           />
                         </div>
                       </div>
-                      <div class="col-6">
+                      <div class="col-lg-6">
                         <label>Store timing</label>
-                        <div class="row align-items-center gx-3">
-                          <div class="col-6">
+                        <div class="row gy-3 align-items-center gx-3">
+                          <div class="col-lg-6">
                             <div class="input-group align-items-stretch">
                               <div class="input-group-prepend">
                                 <span
@@ -503,7 +543,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-6">
+                          <div class="col-lg-6">
                             <div class="input-group align-items-stretch">
                               <div class="input-group-prepend">
                                 <span
@@ -540,13 +580,13 @@
                       ></div>
                     </div>
 
-                    <div class="row mt-4 align-items-center">
-                      <div class="col-4">
+                    <div class="row gy-2 mt-4 align-items-center">
+                      <div class="col-lg-4">
                         <span class="text-secondary"
                           >Total Category Added: 08</span
                         >
                       </div>
-                      <div class="col-3 ms-auto">
+                      <div class="col-lg-3 ms-auto">
                         <button
                           class="btn btn-sm btn-warning text-dark"
                           data-bs-toggle="modal"
@@ -579,13 +619,13 @@
                       ></div>
                     </div>
 
-                    <div class="row mt-4 align-items-center">
-                      <div class="col-4">
+                    <div class="row gy-2 mt-4 align-items-center">
+                      <div class="col-lg-4">
                         <span class="text-secondary"
                           >Total Products Added: 08</span
                         >
                       </div>
-                      <div class="col-3 ms-auto">
+                      <div class="col-lg-3 ms-auto">
                         <button
                           class="btn btn-sm btn-warning text-dark"
                           data-bs-toggle="modal"
@@ -610,7 +650,7 @@
                       </div>
                     </div>
 
-                    <div class="row align-items-center gap-4 mt-4">
+                    <div class="row gy-2 align-items-center gap-4 mt-4">
                       <h5 class="mb-0 col">Brand Selection</h5>
                       <div
                         class="col-9"
@@ -619,12 +659,12 @@
                     </div>
 
                     <div class="row mt-4 align-items-center">
-                      <div class="col-4">
+                      <div class="col-lg-4">
                         <span class="text-secondary"
                           >Total Category Added: 08</span
                         >
                       </div>
-                      <div class="col-3 ms-auto">
+                      <div class="col-lg-3 ms-auto">
                         <button
                           class="btn btn-sm btn-warning text-dark"
                           data-bs-toggle="modal"
@@ -657,13 +697,13 @@
                       ></div>
                     </div>
 
-                    <div class="row mt-4 align-items-center">
-                      <div class="col-4">
+                    <div class="row gy-2 mt-4 align-items-center">
+                      <div class="col-lg-4">
                         <span class="text-dark fw-bold">Select Theme:</span>
                         <span class="text-dark ms-4">Web theme</span>
                       </div>
 
-                      <div class="col-2 ms-auto">
+                      <div class="col-lg-2 ms-auto">
                         <button
                           class="btn btn-sm btn-secondary text-white"
                           data-bs-toggle="modal"
@@ -682,14 +722,14 @@
                       ></div>
                     </div>
 
-                    <div class="row mt-5 align-items-center">
-                      <div class="col">
+                    <div class="row g-2 mt-5 align-items-center">
+                      <div class="col-lg">
                         <select class="form-select">
                           <option value="" disabled>--select category--</option>
-                          <option value="india">India</option>
+                          <option value="india">cat</option>
                         </select>
                       </div>
-                      <div class="col">
+                      <div class="col-lg">
                         <div class="form-check d-flex align-items-center">
                           <input
                             class="form-check-input m-0"
@@ -707,7 +747,7 @@
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col-lg">
                         <select class="form-select">
                           <option value="" disabled>
                             --select sub category--
@@ -716,7 +756,7 @@
                         </select>
                       </div>
 
-                      <div class="col">
+                      <div class="col-lg">
                         <div class="form-check d-flex align-items-center">
                           <input
                             class="form-check-input m-0"
@@ -733,7 +773,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col-lg">
                         <div class="form-check d-flex align-items-center">
                           <input
                             class="form-check-input m-0"
@@ -753,8 +793,8 @@
                     </div>
 
                     <div class="row align-items-center mt-5">
-                      <label class="col mb-0">Select products</label>
-                      <div class="col-10">
+                      <label class="col-lg mb-0">Select products</label>
+                      <div class="col-lg-10">
                         <input
                           name="input-custom-dropdown"
                           class="w-100 rounded-2 fs-12"
@@ -764,15 +804,15 @@
                       </div>
                     </div>
 
-                    <div class="row align-items-center mt-4">
-                      <div class="col-2">Commission Type:</div>
-                      <div class="col-3">
+                    <div class="row gy-2 align-items-center mt-4">
+                      <div class="col-lg-2">Commission Type:</div>
+                      <div class="col-lg-3">
                         <select class="form-select">
                           <option value="type">type</option>
                         </select>
                       </div>
-                      <div class="col-2 ms-auto">Commission value:</div>
-                      <div class="col-4">
+                      <div class="col-lg-2 ms-auto">Commission value:</div>
+                      <div class="col-lg-4">
                         <input type="number" class="form-control" />
                       </div>
                     </div>
@@ -785,9 +825,9 @@
                       ></div>
                     </div>
 
-                    <div class="row align-items-center gx-4 mt-4">
-                      <label class="mb-0 col-2">Select vendor:</label>
-                      <div class="col-6">
+                    <div class="row align-items-center gx-4 gy-2 mt-4">
+                      <label class="mb-0 col-lg-2">Select vendor:</label>
+                      <div class="col-lg-6">
                         <input
                           type="text"
                           class="form-control"
@@ -848,21 +888,25 @@
                     </div>
 
                     <div
-                      class="d-flex align-items-center gap-4 mt-4 justify-content-center"
+                      class="row align-items-center gap-4 mt-4 justify-content-center"
                     >
-                      <button
-                        type="button"
-                        class="btn btn-success py-2 px-5 text-white"
-                        onclick="handleSubmit()"
-                      >
-                        Save
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-danger py-2 px-5"
-                      >
-                        Cancel
-                      </button>
+                      <div class="col-lg-3">
+                        <button
+                          type="button"
+                          class="btn btn-success py-2 px-5 text-white w-100"
+                          onclick="handleSubmit()"
+                        >
+                          Save
+                        </button>
+                      </div>
+                      <div class="col-lg-3">
+                        <button
+                          type="button"
+                          class="btn btn-outline-danger py-2 px-5 w-100"
+                        >
+                          Cancel
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
