@@ -194,7 +194,9 @@ label {
   color: #fff;
 }
 .sidebar .logo__wrapper {
-  display: block;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
 }
 .sidebar .brand__logo {
   width: 46px;
@@ -217,6 +219,7 @@ label {
 
 .sidebar .nav:not(.sub-menu) {
   margin-top: 1rem;
+  flex: 1;
 }
 .sidebar .nav-item {
   opacity: 0.5;
@@ -326,6 +329,38 @@ aside nav ul li:not(:last-child) {
   z-index: 50;
 }
 
+.logo-text {
+  display: none;
+}
+#sidebarCollapseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+.sidebar-icon-only .sidebar.not-collapsed {
+  width: 170px;
+}
+.sidebar-icon-only .sidebar.not-collapsed .logo-text {
+  display: block;
+}
+.sidebar-icon-only .sidebar.not-collapsed .menu-title {
+  display: inline-block !important;
+  margin-left: 10px;
+}
+
+.sidebar-icon-only .sidebar.not-collapsed #sidebarCollapseBtn {
+  justify-content: start;
+}
+.sidebar-icon-only .sidebar.not-collapsed span {
+  display: inline-block !important;
+  color: #fff;
+}
+.sidebar-icon-only .sidebar.not-collapsed .nav .nav-item .nav-link {
+  text-align: left;
+}
+
 @media (min-width: 992px) {
   .sidebar-icon-only .sidebar .nav .nav-item .nav-link {
     color: #fff;
@@ -340,10 +375,12 @@ aside nav ul li:not(:last-child) {
   }
   .sidebar-icon-only .sidebar {
     width: 100px;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     padding: 20px;
   }
+
   .sidebar-icon-only .sidebar__backdrop {
     width: 100vw;
     height: 100vh;
@@ -351,9 +388,32 @@ aside nav ul li:not(:last-child) {
   .sidebar-icon-only .main-panel {
     width: 100vw;
   }
+  .w-lg-50 {
+    width: 50%;
+  }
+  .w-lg-25 {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .sidebar .nav:not(.sub-menu) {
+    max-height: 68vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  .sidebar.not-collapsed .logo__wrapper {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 0 14px;
+  }
+  .sidebar .logo__wrapper {
+    display: block;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 0 14px;
+  }
   .sidebar .brand__logo {
     width: 30px;
     height: 30px;
@@ -383,7 +443,17 @@ aside nav ul li:not(:last-child) {
     margin: 0 auto;
   }
   .sidebar .menu-icon {
+    margin: 0 auto !important;
+  }
+
+  .sidebar-icon-only .sidebar #sidebarCollapseBtn {
     margin: 0 auto;
+  }
+  .sidebar-icon-only .sidebar.not-collapsed #sidebarCollapseBtn {
+    margin: 0 14px;
+  }
+  .sidebar-icon-only .sidebar.not-collapsed .nav .nav-item .nav-link {
+    display: block;
   }
   .content-wrapper {
     padding: 20px;
@@ -396,5 +466,11 @@ aside nav ul li:not(:last-child) {
   .stats__card .stats__card__icon svg {
     width: 20px;
     height: 20px;
+  }
+  td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

@@ -275,7 +275,45 @@
                 <span class="menu-title d-none">Customer</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user.html">
+                <i class="fa-solid fa-hospital-user menu-icon"></i>
+                <span class="menu-title d-none">User</span>
+              </a>
+            </li>
           </ul>
+
+          <button class="btn p-0" id="sidebarCollapseBtn">
+            <svg
+              width="26"
+              height="20"
+              viewBox="0 0 29 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="28.6098" height="23" rx="2.80488" fill="white" />
+              <g clip-path="url(#clip0_127_108)">
+                <path
+                  d="M7.10547 16.4086H15.5201M7.10547 6.31104H15.5201H7.10547ZM7.10547 11.3598H22.0648H7.10547ZM22.0648 11.3598L19.2599 7.57323L22.0648 11.3598ZM22.0648 11.3598L19.2599 15.1464L22.0648 11.3598Z"
+                  stroke="#A394FD"
+                  stroke-width="1.68293"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_127_108">
+                  <rect
+                    width="16.8293"
+                    height="12.622"
+                    fill="white"
+                    transform="translate(6.17041 5.04883)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="d-none ms-2">Collapse</span>
+          </button>
         </nav>
         <div
           class="sidebar__backdrop"
@@ -285,7 +323,7 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row gx-4">
+            <div class="row g-4">
               <div class="col-lg-3">
                 <aside>
                   <div class="card">
@@ -294,7 +332,7 @@
                         <div>
                           <a
                             href="promotion.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav active"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 px-2 cat__side__nav active"
                           >
                             <span>Promotion Management</span>
                             <i
@@ -306,7 +344,7 @@
                         <div>
                           <a
                             href="bundle-offer.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 px-2 cat__side__nav"
                           >
                             <span>Bundle Offer</span>
                             <i
@@ -328,22 +366,22 @@
 
                     <hr class="bg-secondary my-4" />
 
-                    <div class="row align-items-center">
-                      <div class="col-2">
+                    <div class="row gap-2 align-items-center">
+                      <div class="col-12 col-lg-2">
                         <h6 class="mb-0">Promotion Condition:</h6>
                       </div>
-                      <div class="col-3">
+                      <div class="col-12 col-lg-3">
                         <select class="form-select">
                           <option value="">Multiple product</option>
                         </select>
                       </div>
                     </div>
 
-                    <div class="row align-items-center my-4">
-                      <div class="col-2">
+                    <div class="row gap-2 align-items-center my-4">
+                      <div class="col-12 col-lg-2">
                         <h6 class="mb-0">Select products:</h6>
                       </div>
-                      <div class="col-8">
+                      <div class="col-12 col-lg-3">
                         <input
                           class="form-control"
                           placeholder="Search product to add"
@@ -352,7 +390,7 @@
                     </div>
 
                     <div
-                      class="table-responsive rounded-3 mt-4 overflow-hidden border border-light"
+                      class="table-responsive rounded-3 mt-4 border border-light"
                     >
                       <table class="table table-bordered">
                         <thead class="bg-light">
@@ -400,21 +438,21 @@
 
                     <hr class="bg-secondary my-4" />
 
-                    <div class="row align-items-center">
-                      <div class="col-2">
+                    <div class="row gap-2 align-items-center">
+                      <div class="col-12 col-lg-2">
                         <h6 class="mb-0">Discount Details:</h6>
                       </div>
-                      <div class="col-3">
+                      <div class="col-12 col-lg-3">
                         <select class="form-select">
                           <option value="discountAmount">
                             Discount Amount
                           </option>
                         </select>
                       </div>
-                      <div class="col-2 ms-auto">
+                      <div class="col-12 col-lg-3 ms-lg-auto">
                         <h6 class="mb-0">Enter Amount:</h6>
                       </div>
-                      <div class="col-3">
+                      <div class="col-12 col-lg-3">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
@@ -437,21 +475,21 @@
 
                     <hr class="my-4 bg-secondary" />
 
-                    <div class="d-flex align-items-center mb-4">
+                    <div class="d-lg-flex gap-2 align-items-center mb-4">
                       <h5 class="mb-0">Schedule:</h5>
-                      <span class="fs-12 text-secondary ms-2"
+                      <span class="fs-12 text-secondary ms-lg-2"
                         >( Use these settings to limit the coupon expiration
                         date )</span
                       >
                     </div>
 
-                    <div class="row align-items-center gx-4">
-                      <div class="col-2">Start Date:</div>
-                      <div class="col-4">
+                    <div class="row gap-2 align-items-center gx-4">
+                      <div class="col-lg-2">Start Date:</div>
+                      <div class="col-lg-4">
                         <input type="date" class="form-control" />
                       </div>
-                      <div class="col-2">End Date:</div>
-                      <div class="col-4">
+                      <div class="col-lg-2">End Date:</div>
+                      <div class="col-lg-4">
                         <input type="date" class="form-control" />
                       </div>
                     </div>

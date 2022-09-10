@@ -14,22 +14,16 @@ $(function () {
   );
 
   $(".dropdown__menu").click(() => {
-    if ($("ul.aside__sub__nav").hasClass("d-none")) {
-      $("ul.aside__sub__nav").removeClass("d-none");
-      $("ul.aside__sub__nav").addClass("d-block");
-    } else {
-      $("ul.aside__sub__nav").addClass("d-none");
-      $("ul.aside__sub__nav").removeClass("d-block");
-    }
+    $("ul.aside__sub__nav").toggleClass("d-none");
   });
 
-  if ($(".dropdown__menu").hasClass("active")) {
+  if ($(".dropdown__menu .cat__side__nav").hasClass("active")) {
     $("ul.aside__sub__nav").removeClass("d-none");
-    $("ul.aside__sub__nav").addClass("d-block");
-    console.log("hi");
   } else {
     $("ul.aside__sub__nav").addClass("d-none");
-    $("ul.aside__sub__nav").removeClass("d-block");
-    console.log("hello");
   }
+
+  $("#sidebarCollapseBtn").click(() => {
+    $(".sidebar-icon-only .sidebar").toggleClass("not-collapsed");
+  });
 });

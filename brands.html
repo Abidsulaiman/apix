@@ -279,6 +279,12 @@
                 <span class="menu-title d-none">Customer</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user.html">
+                <i class="fa-solid fa-hospital-user menu-icon"></i>
+                <span class="menu-title d-none">User</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi-account menu-icon"></i>
@@ -296,6 +302,38 @@
             </div>
           </li> -->
           </ul>
+
+          <button class="btn p-0" id="sidebarCollapseBtn">
+            <svg
+              width="26"
+              height="20"
+              viewBox="0 0 29 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="28.6098" height="23" rx="2.80488" fill="white" />
+              <g clip-path="url(#clip0_127_108)">
+                <path
+                  d="M7.10547 16.4086H15.5201M7.10547 6.31104H15.5201H7.10547ZM7.10547 11.3598H22.0648H7.10547ZM22.0648 11.3598L19.2599 7.57323L22.0648 11.3598ZM22.0648 11.3598L19.2599 15.1464L22.0648 11.3598Z"
+                  stroke="#A394FD"
+                  stroke-width="1.68293"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_127_108">
+                  <rect
+                    width="16.8293"
+                    height="12.622"
+                    fill="white"
+                    transform="translate(6.17041 5.04883)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="d-none ms-2">Collapse</span>
+          </button>
         </nav>
         <div
           class="sidebar__backdrop"
@@ -305,7 +343,7 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row gx-4">
+            <div class="row g-4">
               <div class="col-lg-3">
                 <aside>
                   <div class="card">
@@ -314,7 +352,7 @@
                         <div>
                           <a
                             href="catalogue.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 px-2 cat__side__nav"
                           >
                             <span>Category Management</span>
                             <i
@@ -326,7 +364,7 @@
                         <div>
                           <a
                             href="attribute.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 px-2 cat__side__nav"
                           >
                             <span>Attribute Management</span>
                             <i
@@ -338,7 +376,7 @@
                         <div>
                           <a
                             href="brands.html"
-                            class="btn d-flex align-items-center w-100 border-bottom py-4 cat__side__nav active"
+                            class="btn d-flex align-items-center w-100 border-bottom py-4 px-2 cat__side__nav active"
                           >
                             <span>Brands</span>
                             <i
@@ -349,7 +387,7 @@
                         </div>
                         <div class="dropdown__menu">
                           <button
-                            class="btn d-flex align-items-center w-100 py-4 cat__side__nav"
+                            class="btn d-flex align-items-center w-100 py-4 px-2 cat__side__nav"
                           >
                             <span>Product Management</span>
                             <i
@@ -424,18 +462,22 @@
                             </button>
                           </div>
                           <div
-                            class="d-flex align-items-center justify-content-center gap-4 mt-4"
+                            class="row align-items-center justify-content-center gap-4 mt-4"
                           >
-                            <button
-                              class="btn btn-success text-white py-2 rounded-3"
-                            >
-                              Save changes
-                            </button>
-                            <button
-                              class="btn btn-danger text-white py-2 rounded-3"
-                            >
-                              Cancel
-                            </button>
+                            <div class="col-lg-3">
+                              <button
+                                class="btn btn-success text-white py-2 rounded-3 w-100"
+                              >
+                                Save changes
+                              </button>
+                            </div>
+                            <div class="col-lg-3">
+                              <button
+                                class="btn btn-danger text-white py-2 rounded-3 w-100"
+                              >
+                                Cancel
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>

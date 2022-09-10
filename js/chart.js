@@ -58,6 +58,8 @@ $(function () {
     ],
   };
   var options = {
+    maintainAspectRatio: false,
+    responsive: true,
     scales: {
       yAxes: [
         {
@@ -137,6 +139,8 @@ $(function () {
   };
 
   var areaOptions = {
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       filler: {
         propagate: true,
@@ -183,6 +187,8 @@ $(function () {
   };
 
   var multiAreaOptions = {
+    maintainAspectRatio: false,
+    responsive: true,
     plugins: {
       filler: {
         propagate: true,
