@@ -260,10 +260,26 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="vendor-list.html">
+              <a
+                class="nav-link d-flex align-items-center"
+                data-toggle="collapseBtn"
+              >
                 <i class="fa fa-user-tie menu-icon"></i>
-                <span class="menu-title d-none">Vendors</span>
+                <span class="menu-title">Vendors</span>
+                <i class="fa fa-chevron-down"></i>
               </a>
+              <div class="sidebar_collapse d-none">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="vendor-list.html">List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="payment-management.html"
+                      >Payment</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="influencer-list.html">
@@ -480,7 +496,7 @@
     <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- End plugin js for this page-->
     <!-- inject:js -->
-    <script src="js/off-canvas.js"></script>
+
     <script src="js/hoverable-collapse.js"></script>
     <script src="js/template.js"></script>
     <script
