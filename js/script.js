@@ -1,4 +1,7 @@
 $(function () {
+  const navItem = $(".nav-item");
+  const collapse = $(".sidebar_collapse");
+
   $('input[name="daterange"]').daterangepicker(
     {
       opens: "left",
@@ -38,7 +41,8 @@ $(function () {
     $("body").removeClass("sidebar-icon-only");
   }
 
-  $(".dropdown-item").click((e) => {
-    console.log(e);
+  // if(navItem)
+  $(".nav-item a[data-toggle='collapseBtn']").click(function () {
+    collapse.toggleClass("d-none");
   });
 });

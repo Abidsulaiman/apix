@@ -1,4 +1,18 @@
 /* common */
+a[data-toggle="collapseBtn"] {
+  cursor: pointer;
+}
+a[data-toggle="collapseBtn"] i.fa-chevron-down {
+  margin-left: auto;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link.active {
+  color: #fff;
+  background: transparent;
+}
+.sidebar .nav-item:has(.nav-link.active) {
+  opacity: 1;
+}
 .nav-search {
   border-bottom: 1px solid rgb(220, 220, 220) !important;
 }
@@ -189,6 +203,13 @@ label {
   border-right: none;
   overflow: hidden;
 }
+
+.sidebar .nav.sub-menu .nav-item::before {
+  display: none;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link:hover {
+  color: #fff;
+}
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
   background: transparent;
   color: #fff;
@@ -224,6 +245,15 @@ label {
 .sidebar-icon-only .sidebar.collapsed .nav .nav-item .nav-link {
   justify-content: center;
 }
+.sidebar-icon-only
+  .sidebar.collapsed
+  a[data-toggle="collapseBtn"]
+  i.fa-chevron-down {
+  margin-left: 0;
+}
+.sidebar-icon-only .sidebar.collapsed .nav.sub-menu {
+  padding-left: 0;
+}
 .sidebar-icon-only .sidebar.collapsed #sidebarCollapseBtn {
   display: block;
 }
@@ -231,11 +261,11 @@ label {
   display: none;
 }
 .sidebar-icon-only .main-panel {
-  width: calc(100vw - 8vw);
+  width: calc(100vw - 7vw);
   margin-left: auto;
 }
 .sidebar-icon-only .page-body-wrapper .navbar {
-  width: calc(100vw - 8vw);
+  width: calc(100vw - 7vw);
 }
 
 .sidebar__backdrop {
@@ -262,20 +292,22 @@ label {
   padding-top: 100px;
   flex-direction: column;
   margin-left: auto;
+  min-height: 100vh;
 }
 
 .sidebar-icon-only.sidebar-text .page-body-wrapper .sidebar-offcanvas {
   width: 13vw;
+}
+.sidebar-icon-only.sidebar-text .page-body-wrapper .main-panel {
+  /* width: calc(100vw - 13vw); */
+  flex: 1;
+  margin-left: 13vw;
 }
 .sidebar-icon-only.sidebar-text .page-body-wrapper .navbar {
   position: fixed;
   top: 0;
   width: calc(100vw - 13vw);
   z-index: 1000;
-}
-.sidebar-icon-only.sidebar-text .page-body-wrapper .main-panel {
-  width: calc(100vw - 14vw);
-  margin-left: auto;
 }
 .sidebar-icon-only.sidebar-text
   .page-body-wrapper
@@ -336,6 +368,11 @@ label {
 }
 .stats__card .title {
   color: #222222;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
 }
 .stats__card .percentage__badge {
   font-size: 10px;
@@ -351,8 +388,8 @@ label {
   margin-bottom: 0;
 }
 .stats__card .stats__card__icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
