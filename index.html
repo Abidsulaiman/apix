@@ -32,206 +32,18 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
   </head>
-  <body>
+  <body class="sidebar-icon-only sidebar-text">
     <div class="container-scroller">
-      <!-- partial:partials/_navbar.html -->
-      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="navbar-brand-wrapper d-flex justify-content-center">
-          <div
-            class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"
-          >
-            <button
-              class="navbar-toggler navbar-toggler align-self-center"
-              type="button"
-              data-toggle="minimize"
-            >
-              <span class="fa fa-bars"></span>
-            </button>
-          </div>
-        </div>
-        <div
-          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
-        >
-          <ul class="navbar-nav mr-lg-4 w-100">
-            <li class="nav-item nav-search d-none d-lg-block w-100">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="search">
-                    <i class="fa fa-search"></i>
-                  </span>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search Menu, Customer name"
-                  aria-label="search"
-                  aria-describedby="search"
-                />
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown mx-2">
-              <a
-                class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-                id="messageDropdown"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                <i class="fa-solid fa-envelope"></i>
-                <span class="count"></span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                aria-labelledby="messageDropdown"
-              >
-                <p class="mb-0 font-weight-normal float-left dropdown-header">
-                  Messages
-                </p>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <img
-                      src="images/faces/face4.jpg"
-                      alt="image"
-                      class="profile-pic"
-                    />
-                  </div>
-                  <div class="item-content flex-grow">
-                    <h6 class="ellipsis font-weight-normal">David Grey</h6>
-                    <p class="font-weight-light small-text text-muted mb-0">
-                      The meeting is cancelled
-                    </p>
-                  </div>
-                </a>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <img
-                      src="images/faces/face2.jpg"
-                      alt="image"
-                      class="profile-pic"
-                    />
-                  </div>
-                  <div class="item-content flex-grow">
-                    <h6 class="ellipsis font-weight-normal">Tim Cook</h6>
-                    <p class="font-weight-light small-text text-muted mb-0">
-                      New product launch
-                    </p>
-                  </div>
-                </a>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <img
-                      src="images/faces/face3.jpg"
-                      alt="image"
-                      class="profile-pic"
-                    />
-                  </div>
-                  <div class="item-content flex-grow">
-                    <h6 class="ellipsis font-weight-normal">Johnson</h6>
-                    <p class="font-weight-light small-text text-muted mb-0">
-                      Upcoming board meeting
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item dropdown mx-2">
-              <a
-                class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
-                id="notificationDropdown"
-                href="#"
-                data-bs-toggle="dropdown"
-              >
-                <i class="fa-solid fa-bell"></i>
-                <span class="count"></span>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                aria-labelledby="notificationDropdown"
-              >
-                <p class="mb-0 font-weight-normal float-left dropdown-header">
-                  Notifications
-                </p>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <div class="item-icon bg-success">
-                      <i class="mdi mdi-information mx-0"></i>
-                    </div>
-                  </div>
-                  <div class="item-content">
-                    <h6 class="font-weight-normal">Application Error</h6>
-                    <p class="font-weight-light small-text mb-0 text-muted">
-                      Just now
-                    </p>
-                  </div>
-                </a>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <div class="item-icon bg-warning">
-                      <i class="mdi mdi-settings mx-0"></i>
-                    </div>
-                  </div>
-                  <div class="item-content">
-                    <h6 class="font-weight-normal">Settings</h6>
-                    <p class="font-weight-light small-text mb-0 text-muted">
-                      Private message
-                    </p>
-                  </div>
-                </a>
-                <a class="dropdown-item">
-                  <div class="item-thumbnail">
-                    <div class="item-icon bg-info">
-                      <i class="mdi mdi-account-box mx-0"></i>
-                    </div>
-                  </div>
-                  <div class="item-content">
-                    <h6 class="font-weight-normal">New user registration</h6>
-                    <p class="font-weight-light small-text mb-0 text-muted">
-                      2 days ago
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="nav-item nav-profile dropdown ms-2">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                data-bs-toggle="dropdown"
-                id="profileDropdown"
-              >
-                <img src="images/faces/face5.jpg" alt="profile" />
-                <span class="nav-profile-name">Louis Barnett</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </a>
-              <div
-                class="dropdown-menu dropdown-menu-right navbar-dropdown"
-                aria-labelledby="profileDropdown"
-              >
-                <a class="dropdown-item">
-                  <i class="mdi mdi-settings text-primary"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item">
-                  <i class="mdi mdi-logout text-primary"></i>
-                  Logout
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
       <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
+      <div class="page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <div class="text-center logo__wrapper">
             <img
-              src="./images/apix-logo.svg"
+              src="./images/apix_logo.jpg"
               class="brand__logo"
               alt="apix logo icon"
             />
-            <h5 class="logo-text fw-bold text-white mb-0">APIX</h5>
           </div>
           <ul class="nav">
             <li class="nav-item">
@@ -336,12 +148,206 @@
                 </clipPath>
               </defs>
             </svg>
-            <span class="d-none ms-2">Collapse</span>
+            <span class="text-white ms-2">Collapse</span>
           </button>
         </nav>
 
         <!-- partial -->
         <div class="main-panel">
+          <!-- partial:partials/_navbar.html -->
+          <nav class="navbar p-0">
+            <div class="navbar-brand-wrapper d-flex justify-content-center">
+              <div
+                class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"
+              >
+                <button
+                  class="navbar-toggler navbar-toggler align-self-center"
+                  type="button"
+                  id="navbar-toggler"
+                >
+                  <span class="fa fa-bars"></span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+            >
+              <ul class="navbar-nav mr-lg-4 w-100">
+                <li class="nav-item nav-search d-none d-lg-block w-100">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="search">
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search Menu, Customer name"
+                      aria-label="search"
+                      aria-describedby="search"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown mx-2">
+                  <a
+                    class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                    id="messageDropdown"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="count"></span>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="messageDropdown"
+                  >
+                    <p
+                      class="mb-0 font-weight-normal float-left dropdown-header"
+                    >
+                      Messages
+                    </p>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face4.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">David Grey</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          The meeting is cancelled
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face2.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">Tim Cook</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          New product launch
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face3.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">Johnson</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          Upcoming board meeting
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                  <a
+                    class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
+                    id="notificationDropdown"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="count"></span>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="notificationDropdown"
+                  >
+                    <p
+                      class="mb-0 font-weight-normal float-left dropdown-header"
+                    >
+                      Notifications
+                    </p>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-success">
+                          <i class="mdi mdi-information mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">Application Error</h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          Just now
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-warning">
+                          <i class="mdi mdi-settings mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">Settings</h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          Private message
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-info">
+                          <i class="mdi mdi-account-box mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">
+                          New user registration
+                        </h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          2 days ago
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item nav-profile dropdown ms-2">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    id="profileDropdown"
+                  >
+                    <img src="images/faces/face5.jpg" alt="profile" />
+                    <span class="nav-profile-name">Louis Barnett</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="profileDropdown"
+                  >
+                    <a class="dropdown-item">
+                      <i class="mdi mdi-settings text-primary"></i>
+                      Settings
+                    </a>
+                    <a class="dropdown-item">
+                      <i class="mdi mdi-logout text-primary"></i>
+                      Logout
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
           <div class="content-wrapper">
             <div class="row gx-5 gy-4">
               <div class="col-lg-3">
@@ -357,35 +363,40 @@
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
                     <div class="mt-3 d-flex align-items-center">
-                      <h6 class="fs-1 value">136</h6>
-                      <span
-                        class="percentage__badge bg-success-light text-success mx-2"
-                        >+16 <sup>%</sup>
-                      </span>
-                      <svg
-                        width="12"
-                        height="11"
-                        viewBox="0 0 12 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
-                          fill="#66D184"
-                        />
-                      </svg>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <h6 class="fs-3 value">136.00 KD</h6>
+                          <span
+                            class="percentage__badge bg-success-light text-success mx-2"
+                            >+16 <sup>%</sup>
+                          </span>
+                          <svg
+                            width="12"
+                            height="11"
+                            viewBox="0 0 12 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                              fill="#66D184"
+                            />
+                          </svg>
+                        </div>
+                        <span class="text-secondary fs-12">Today's Order</span>
+                      </div>
 
                       <div class="stats__card__icon bg-warning ms-auto">
                         <svg
@@ -415,44 +426,49 @@
                   <div class="card-body">
                     <div class="d-flex align-items-center">
                       <h5 class="mb-0 title">Total Sales</h5>
-                      <div class="position-relative ms-auto">
+                      <div class="position-relative ms-auto filterDropdown">
                         <button
-                          class="btn btn-sm btn-light dropdown-toggle"
+                          class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
                           type="button"
                           data-bs-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
                     <div class="mt-3 d-flex align-items-center">
-                      <h6 class="fs-1 value">2156</h6>
-                      <span
-                        class="percentage__badge bg-danger-light text-danger mx-2"
-                        >-16 <sup>%</sup>
-                      </span>
-                      <svg
-                        width="12"
-                        height="11"
-                        viewBox="0 0 12 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        style="transform: rotate(180deg)"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
-                          fill="#FC3C3C"
-                        />
-                      </svg>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <h6 class="fs-3 value">2156.00 KD</h6>
+                          <span
+                            class="percentage__badge bg-danger-light text-danger mx-2"
+                            >-16 <sup>%</sup>
+                          </span>
+                          <svg
+                            width="12"
+                            height="11"
+                            viewBox="0 0 12 11"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="transform: rotate(180deg)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                              fill="#FC3C3C"
+                            />
+                          </svg>
+                        </div>
+                        <span class="text-secondary fs-12">Today's Sales</span>
+                      </div>
 
                       <div class="stats__card__icon bg-success ms-auto">
                         <svg
@@ -492,12 +508,12 @@
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
@@ -537,12 +553,12 @@
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
@@ -588,7 +604,7 @@
                         </button>
                       </div>
                     </div>
-                    <div class="chart-container" style="height: 40vh">
+                    <div class="chart-container" style="height: 250px">
                       <canvas id="areachart-multi"></canvas>
                     </div>
                   </div>
@@ -608,12 +624,12 @@
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
@@ -650,12 +666,12 @@
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Dropdown
+                          Today
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Today</a>
-                          <a class="dropdown-item" href="#">Last week</a>
-                          <a class="dropdown-item" href="#">Last month</a>
+                          <button class="dropdown-item">Today</button>
+                          <button class="dropdown-item">Last week</button>
+                          <button class="dropdown-item">Last month</button>
                         </div>
                       </div>
                     </div>
@@ -1217,7 +1233,7 @@
                       </div>
                     </div>
 
-                    <div class="chart-container" style="height: 40vh">
+                    <div class="chart-container" style="height: 220px">
                       <canvas id="areaChart"></canvas>
                     </div>
                   </div>

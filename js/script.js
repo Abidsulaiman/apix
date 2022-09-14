@@ -23,8 +23,22 @@ $(function () {
     $("ul.aside__sub__nav").addClass("d-none");
   }
 
+  $("#navbar-toggler").click(() => {
+    $("body").toggleClass("sidebar-text");
+    $("body").toggleClass("sidebar-icon-only");
+  });
+
   $("#sidebarCollapseBtn").click(() => {
-    $(".sidebar-icon-only .sidebar").toggleClass("not-collapsed");
-    $(".sidebar-icon-only").toggleClass("sidebar-text");
+    $(".sidebar").toggleClass("collapsed");
+    $("body").toggleClass("sidebar-text");
+  });
+
+  if (window.innerWidth < 991) {
+    $("body").removeClass("sidebar-text");
+    $("body").removeClass("sidebar-icon-only");
+  }
+
+  $(".dropdown-item").click((e) => {
+    console.log(e);
   });
 });
