@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>APIX admin dashboard</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+  </head>
+  <body class="sidebar-icon-only sidebar-text">
+    <div class="container-scroller">
+      <!-- partial -->
+      <div class="page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <div class="text-center logo__wrapper">
+            <img
+              src="./images/apix_logo.jpg"
+              class="brand__logo"
+              alt="apix logo icon"
+            />
+          </div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fa fa-line-chart menu-icon"></i>
+                <span class="menu-title d-none">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="catalogue.html">
+                <i class="fa fa-layer-group menu-icon"></i>
+                <span class="menu-title d-none">Catalogue</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html">
+                <i class="fa fa-box-open menu-icon"></i>
+                <span class="menu-title d-none">Orders</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="promotion.html">
+                <i class="fa fa-ticket menu-icon"></i>
+                <span class="menu-title d-none">Promotion</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                data-toggle="collapseBtn"
+              >
+                <i class="fa fa-user-tie menu-icon"></i>
+                <span class="menu-title">Vendors</span>
+                <i class="fa fa-chevron-down"></i>
+              </a>
+              <div class="sidebar_collapse d-none">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="vendor-list.html">List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="payment-management.html"
+                      >Payment</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="influencer-list.html">
+                <i class="fa-solid fa-handshake menu-icon"></i>
+                <span class="menu-title d-none">Influencer</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer-list.html">
+                <i class="fa-solid fa-user menu-icon"></i>
+                <span class="menu-title d-none">Customer</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user.html">
+                <i class="fa-solid fa-hospital-user menu-icon"></i>
+                <span class="menu-title d-none">User</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fa-solid fa-sign-in menu-icon"></i>
+                <span class="menu-title d-none">Login</span>
+              </a>
+            </li>
+          </ul>
+
+          <button class="btn p-0" id="sidebarCollapseBtn">
+            <svg
+              width="26"
+              height="20"
+              viewBox="0 0 29 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="28.6098" height="23" rx="2.80488" fill="white" />
+              <g clip-path="url(#clip0_127_108)">
+                <path
+                  d="M7.10547 16.4086H15.5201M7.10547 6.31104H15.5201H7.10547ZM7.10547 11.3598H22.0648H7.10547ZM22.0648 11.3598L19.2599 7.57323L22.0648 11.3598ZM22.0648 11.3598L19.2599 15.1464L22.0648 11.3598Z"
+                  stroke="#A394FD"
+                  stroke-width="1.68293"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_127_108">
+                  <rect
+                    width="16.8293"
+                    height="12.622"
+                    fill="white"
+                    transform="translate(6.17041 5.04883)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="text-white ms-2">Collapse</span>
+          </button>
+        </nav>
+
+        <!-- partial -->
+        <div class="main-panel">
+          <!-- partial:partials/_navbar.html -->
+          <nav class="navbar p-0">
+            <div class="navbar-brand-wrapper d-flex justify-content-center">
+              <div
+                class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"
+              >
+                <button
+                  class="navbar-toggler navbar-toggler align-self-center"
+                  type="button"
+                  id="navbar-toggler"
+                >
+                  <span class="fa fa-bars"></span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+            >
+              <ul class="navbar-nav mr-lg-4 w-100">
+                <li class="nav-item nav-search d-none d-lg-block w-100">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="search">
+                        <i class="fa fa-search"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search Menu, Customer name"
+                      aria-label="search"
+                      aria-describedby="search"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown mx-2">
+                  <a
+                    class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                    id="messageDropdown"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="count"></span>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="messageDropdown"
+                  >
+                    <p
+                      class="mb-0 font-weight-normal float-left dropdown-header"
+                    >
+                      Messages
+                    </p>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face4.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">David Grey</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          The meeting is cancelled
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face2.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">Tim Cook</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          New product launch
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <img
+                          src="images/faces/face3.jpg"
+                          alt="image"
+                          class="profile-pic"
+                        />
+                      </div>
+                      <div class="item-content flex-grow">
+                        <h6 class="ellipsis font-weight-normal">Johnson</h6>
+                        <p class="font-weight-light small-text text-muted mb-0">
+                          Upcoming board meeting
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                  <a
+                    class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
+                    id="notificationDropdown"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="count"></span>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="notificationDropdown"
+                  >
+                    <p
+                      class="mb-0 font-weight-normal float-left dropdown-header"
+                    >
+                      Notifications
+                    </p>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-success">
+                          <i class="mdi mdi-information mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">Application Error</h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          Just now
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-warning">
+                          <i class="mdi mdi-settings mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">Settings</h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          Private message
+                        </p>
+                      </div>
+                    </a>
+                    <a class="dropdown-item">
+                      <div class="item-thumbnail">
+                        <div class="item-icon bg-info">
+                          <i class="mdi mdi-account-box mx-0"></i>
+                        </div>
+                      </div>
+                      <div class="item-content">
+                        <h6 class="font-weight-normal">
+                          New user registration
+                        </h6>
+                        <p class="font-weight-light small-text mb-0 text-muted">
+                          2 days ago
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item nav-profile dropdown ms-2">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    id="profileDropdown"
+                  >
+                    <img src="images/faces/face5.jpg" alt="profile" />
+                    <span class="nav-profile-name">Louis Barnett</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="profileDropdown"
+                  >
+                    <a class="dropdown-item">
+                      <i class="mdi mdi-settings text-primary"></i>
+                      Settings
+                    </a>
+                    <a class="dropdown-item">
+                      <i class="mdi mdi-logout text-primary"></i>
+                      Logout
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="content-wrapper">
+            <div class="container-fluid">
+              <div class="row g-3">
+                <div class="col-lg-3">
+                  <div class="card border-warning stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Orders</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">136.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-success-light text-success mx-2"
+                              >+16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#66D184"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12"
+                            >Today's Order</span
+                          >
+                        </div>
+
+                        <div class="stats__card__icon bg-warning ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="card border-warning stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Sales</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">136.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-success-light text-success mx-2"
+                              >+16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#66D184"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12"
+                            >Today's Sales</span
+                          >
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Influencer outstanding</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-3 value">215</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Vendor Outstanding</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-3 value">215</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Paid Amount to Influencer</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Paid amount to Vendor</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Delivery for today</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Sales return requests</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Approved Requests</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-success stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Stock Count</h5>
+                        <div class="position-relative ms-auto filterDropdown">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle filterDropdownBtn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <div class="d-flex align-items-center">
+                            <h6 class="fs-4 value">2150.000 KD</h6>
+                            <span
+                              class="percentage__badge bg-danger-light text-danger mx-2"
+                              >-16 <sup>%</sup>
+                            </span>
+                            <svg
+                              width="12"
+                              height="11"
+                              viewBox="0 0 12 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              style="transform: rotate(180deg)"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.634523 10.4344L1.20012 11L6.00012 6.2L10.8001 11L11.3657 10.4344L6.28332 5.3512H5.71692L0.634523 10.4344ZM0.634523 5.6344L1.20012 6.2L6.00012 1.4L10.8001 6.2L11.3657 5.6344L6.28332 0.5512H5.71692L0.634523 5.6344Z"
+                                fill="#FC3C3C"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-secondary fs-12">Today's</span>
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-primary stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Customers</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <h6 class="fs-4 value">032</h6>
+                          <span class="text-secondary fs-12"
+                            >Today's Sales</span
+                          >
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="card border-purple stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Influencers</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <div>
+                          <h6 class="fs-4 value">136</h6>
+                          <span class="text-secondary fs-12"
+                            >Today's Sales</span
+                          >
+                        </div>
+
+                        <div class="stats__card__icon bg-success ms-auto">
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 38 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M37.9556 26.7056L32.6512 21.4012L30 18.75L22.0331 26.7169L24.6862 29.3681L30 24.0544L35.3025 29.3569L37.9556 26.7056ZM9.375 16.875H16.875V20.625H9.375V16.875Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M37.5 0H0V3.75H3.75V24.375C3.75149 25.3691 4.14705 26.3221 4.84999 27.025C5.55293 27.7279 6.50589 28.1235 7.5 28.125H16.875L30 15L33.75 18.75V3.75H37.5V0ZM7.5 3.75H30V9.375L15 24.375H7.5V3.75Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2 g-3">
+                <div class="col-lg-9 stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-lg-flex align-items-center mb-3">
+                        <h4 class="card-title mb-lg-0">Sales Analytics</h4>
+
+                        <div
+                          class="d-flex align-items-center ms-auto mb-2 mb-lg-0"
+                        >
+                          <button class="btn btn-sm bg-light">This week</button>
+                          <button class="btn btn-sm bg-light opacity-25">
+                            Last week
+                          </button>
+                          <button class="btn btn-sm bg-light opacity-25">
+                            Last month
+                          </button>
+                        </div>
+                      </div>
+                      <div class="chart-container" style="height: 200px">
+                        <canvas id="areachart-multi"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-lg-3 d-flex flex-column justify-content-between"
+                >
+                  <div class="card border-purple stats__card mb-1">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Influencers</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <h6 class="fs-1 value">136</h6>
+
+                        <div class="stats__card__icon bg-lime ms-auto">
+                          <svg
+                            width="31"
+                            height="30"
+                            viewBox="0 0 31 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.8237 0.673388C14.3235 0.096501 15.984 0.096501 17.4838 0.673388L28.2189 4.80127C28.8309 5.03693 29.3572 5.45248 29.7283 5.99317C30.0994 6.53386 30.2981 7.17431 30.298 7.83012V22.1652C30.2981 22.821 30.0994 23.4615 29.7283 24.0022C29.3572 24.5429 28.8309 24.9584 28.2189 25.1941L17.4838 29.3241C15.984 29.901 14.3235 29.901 12.8237 29.3241L2.09077 25.1941C1.47836 24.9588 0.951643 24.5433 0.580093 24.0026C0.208544 23.4619 0.00960833 22.8213 0.00952148 22.1652V7.83012C0.00960833 7.17405 0.208544 6.53342 0.580093 5.9927C0.951643 5.45199 1.47836 5.03658 2.09077 4.80127L12.8237 0.673388V0.673388ZM16.7071 2.6919C15.7072 2.30731 14.6003 2.30731 13.6004 2.6919L10.6062 3.84502L22.6999 8.42291L26.9143 6.61858L16.7071 2.68973V2.6919ZM28.1345 8.44671L16.2355 13.5503V27.457C16.3956 27.4159 16.5514 27.3662 16.7071 27.3056L27.4422 23.1777C27.6462 23.099 27.8215 22.9603 27.9451 22.78C28.0687 22.5996 28.1348 22.386 28.1345 22.1674V8.45103V8.44671ZM14.072 27.4549V13.5503L2.17298 8.44887V22.1652C2.17275 22.3839 2.23879 22.5974 2.36237 22.7778C2.48596 22.9582 2.66131 23.0968 2.86529 23.1756L13.6004 27.3034C13.7562 27.364 13.9119 27.4138 14.072 27.4549V27.4549ZM3.39318 6.61858L15.1538 11.6594L19.8355 9.65175L7.57515 5.00896L3.39318 6.61858Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-purple stats__card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h5 class="mb-0 title">Total Influencers</h5>
+                        <div class="position-relative ms-auto">
+                          <button
+                            class="btn btn-sm btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Today
+                          </button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">Today</button>
+                            <button class="dropdown-item">Last week</button>
+                            <button class="dropdown-item">Last month</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center">
+                        <h6 class="fs-1 value">136</h6>
+
+                        <div class="stats__card__icon bg-secondary ms-auto">
+                          <svg
+                            width="31"
+                            height="30"
+                            viewBox="0 0 31 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.8237 0.673388C14.3235 0.096501 15.984 0.096501 17.4838 0.673388L28.2189 4.80127C28.8309 5.03693 29.3572 5.45248 29.7283 5.99317C30.0994 6.53386 30.2981 7.17431 30.298 7.83012V22.1652C30.2981 22.821 30.0994 23.4615 29.7283 24.0022C29.3572 24.5429 28.8309 24.9584 28.2189 25.1941L17.4838 29.3241C15.984 29.901 14.3235 29.901 12.8237 29.3241L2.09077 25.1941C1.47836 24.9588 0.951643 24.5433 0.580093 24.0026C0.208544 23.4619 0.00960833 22.8213 0.00952148 22.1652V7.83012C0.00960833 7.17405 0.208544 6.53342 0.580093 5.9927C0.951643 5.45199 1.47836 5.03658 2.09077 4.80127L12.8237 0.673388ZM16.7071 2.6919C15.7072 2.30731 14.6003 2.30731 13.6004 2.6919L10.6062 3.84502L22.6999 8.42291L26.9143 6.61858L16.7071 2.68973V2.6919ZM28.1345 8.44671L16.2355 13.5503V27.457C16.3956 27.4159 16.5513 27.3662 16.7071 27.3056L27.4422 23.1777C27.6462 23.099 27.8215 22.9603 27.9451 22.78C28.0687 22.5996 28.1348 22.386 28.1345 22.1674V8.45103V8.44671ZM14.072 27.4549V13.5503L2.17298 8.44887V22.1652C2.17275 22.3839 2.23879 22.5974 2.36238 22.7778C2.48596 22.9582 2.66131 23.0968 2.86529 23.1756L13.6004 27.3034C13.7562 27.364 13.9119 27.4138 14.072 27.4549ZM3.39318 6.61858L15.1538 11.6594L19.8355 9.65175L7.57515 5.00897L3.39318 6.61858Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2 g-3">
+                <div class="col-lg-6">
+                  <div class="card border-0">
+                    <div class="card-body p-3 p-lg-4">
+                      <div class="d-lg-flex align-items-center">
+                        <h4 class="card-title mb-3 mb-lg-0">
+                          Best Selling Products
+                        </h4>
+
+                        <div class="d-flex align-items-stretch ms-lg-auto">
+                          <input
+                            type="text"
+                            name="daterange"
+                            value="01/01/2021 - 01/15/2022"
+                            class="ms-auto bg-light border-0 p-2 w-100"
+                          />
+                          <button
+                            class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                          >
+                            <i class="fa fa-filter"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Product Name</th>
+                              <th>Sales (pcs)</th>
+                              <th>Price</th>
+                              <th class="text-end">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="d-flex align-items-center gx-2">
+                                  <img
+                                    src="images/product-image.png"
+                                    alt="product image"
+                                    class="table__product__image mt-0"
+                                  />
+                                  <div class="ms-3">
+                                    <h6 class="mb-1">Sports shoe</h6>
+                                    <p class="mb-0">SKU12457</p>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>1289</td>
+                              <td>3.25 KWD</td>
+
+                              <td class="text-end">
+                                <label
+                                  class="badge text-success rounded-2 bg-success-light"
+                                >
+                                  <i class="fa fa-circle"></i>
+                                  In stock
+                                </label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex align-items-center gx-2">
+                                  <img
+                                    src="images/product-image.png"
+                                    alt="product image"
+                                    class="table__product__image mt-0"
+                                  />
+                                  <div class="ms-3">
+                                    <h6 class="mb-1">Sports shoe</h6>
+                                    <p class="mb-0">SKU12457</p>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>1289</td>
+                              <td>3.25 KWD</td>
+
+                              <td class="text-end">
+                                <label
+                                  class="badge text-warning rounded-2 bg-warning-light"
+                                >
+                                  <i class="fa fa-circle"></i>
+                                  Out of stock
+                                </label>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="card border-0">
+                    <div class="card-body p-3 p-lg-4">
+                      <div class="d-lg-flex align-items-center">
+                        <h4 class="card-title mb-3 mb-lg-0">Recent Orders</h4>
+
+                        <div class="d-flex align-items-stretch ms-lg-auto">
+                          <input
+                            type="text"
+                            name="daterange"
+                            value="01/01/2018 - 01/15/2018"
+                            class="ms-auto bg-light border-0 p-2 w-100"
+                          />
+                          <button
+                            class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                          >
+                            <i class="fa fa-filter"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Order ID</th>
+                              <th>Store Name</th>
+                              <th>Date</th>
+                              <th>Price</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>#ID12457</td>
+                              <td>Shop Name</td>
+                              <td>02-07-2022</td>
+                              <td>3.25 KWD</td>
+
+                              <td class="text-end">
+                                <label
+                                  class="badge text-warning rounded-2 bg-warning-light"
+                                >
+                                  Cancelled
+                                </label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#ID12457</td>
+                              <td>Shop Name</td>
+                              <td>02-07-2022</td>
+                              <td>3.25 KWD</td>
+
+                              <td class="text-end">
+                                <label
+                                  class="badge text-success rounded-2 bg-success-light"
+                                >
+                                  Delivered
+                                </label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>#ID12457</td>
+                              <td>Shop Name</td>
+                              <td>02-07-2022</td>
+                              <td>3.25 KWD</td>
+
+                              <td class="text-end">
+                                <label
+                                  class="badge text-purple rounded-2 bg-purple-light"
+                                >
+                                  Pending
+                                </label>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2 g-3">
+                <div class="col-lg-6">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">Delivery for today</h4>
+
+                        <button
+                          class="btn btn-sm bg-light ms-auto text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Invoice Number</th>
+                              <th>Customer Name</th>
+                              <th>Area Of Delivery</th>
+                              <th>Delivery Date</th>
+                              <th class="text-center">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>
+                                <p class="text-truncate" style="width: 200px">
+                                  Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                  nagar, Ba...
+                                </p>
+                              </td>
+                              <td>03-07-2022</td>
+
+                              <td class="text-center">
+                                <label
+                                  class="badge text-success rounded-2 bg-success-light"
+                                >
+                                  Active
+                                </label>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">
+                          Number of Ordered items that need to be received
+                        </h4>
+
+                        <button
+                          class="btn btn-sm bg-light ms-auto text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Item Name</th>
+                              <th>Vendor Name</th>
+                              <th>Invoice Number</th>
+                              <th>Delivery Date</th>
+                              <th class="text-center">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>INV001</td>
+                              <td>03-07-2022</td>
+                              <td class="text-center">
+                                <label
+                                  class="badge text-success rounded-2 bg-success-light"
+                                >
+                                  Active
+                                </label>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2 g-3">
+                <div class="col-lg-9">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">New Customers</h4>
+
+                        <button
+                          class="btn btn-sm bg-light ms-auto text-secondary"
+                        >
+                          <i class="fa fa-filter"></i>
+                        </button>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>S.No</th>
+                              <th>Customer Name</th>
+                              <th>Mobile.No</th>
+                              <th>Address</th>
+                              <th>Enrolled On</th>
+                              <th class="text-center">Status</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>
+                                <p class="text-truncate" style="width: 200px">
+                                  Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                  nagar, Ba...
+                                </p>
+                              </td>
+                              <td>03-07-2022</td>
+
+                              <td class="text-center">
+                                <label
+                                  class="badge text-success rounded-2 bg-success-light"
+                                >
+                                  Active
+                                </label>
+                              </td>
+
+                              <td>
+                                <button
+                                  class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                                >
+                                  <span>Edit</span>
+                                  <i
+                                    class="fas fa-pencil-alt ms-1"
+                                    style="font-size: 10px"
+                                  ></i>
+                                </button>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>
+                                <p class="text-truncate" style="width: 200px">
+                                  Akshya Nagar, 1st Block 1st Cross, Rammurthy
+                                  nagar, Ba...
+                                </p>
+                              </td>
+                              <td>03-07-2022</td>
+
+                              <td class="text-center">
+                                <label
+                                  class="badge text-danger rounded-2 bg-danger-light"
+                                >
+                                  Inactive
+                                </label>
+                              </td>
+
+                              <td>
+                                <button
+                                  class="btn btn-sm btn-primary text-white d-flex align-items-center"
+                                >
+                                  <span>Edit</span>
+                                  <i
+                                    class="fas fa-pencil-alt ms-1"
+                                    style="font-size: 10px"
+                                  ></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 stretch-card">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">Top Search Term</h4>
+
+                        <button
+                          class="btn btn-sm bg-light ms-auto text-secondary"
+                        >
+                          <i class="fas fa-sliders-h"></i>
+                        </button>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Product Name</th>
+                              <th>Search Iteration</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Black shoe</td>
+                              <td>123</td>
+                            </tr>
+                            <tr>
+                              <td>Black shoe</td>
+                              <td>123</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4 gx-5 gy-4">
+                <div class="col-lg-4">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">New Added Vendors</h4>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>S.No</th>
+                              <th>Customer Name</th>
+                              <th>Mobile.No</th>
+                              <th>Vendor Id</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>VID00045</td>
+                            </tr>
+                            <tr>
+                              <td>02</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>VID00045</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">New Added Influencers</h4>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>S.No</th>
+                              <th>Customer Name</th>
+                              <th>Mobile.No</th>
+                              <th>Vendor Id</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>01</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>VID00045</td>
+                            </tr>
+                            <tr>
+                              <td>02</td>
+                              <td>Shamseer</td>
+                              <td>(+91) 9876543210</td>
+                              <td>VID00045</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <h4 class="card-title mb-0">Last search Term</h4>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <img
+                                  src="images/product-image.png"
+                                  alt="product image"
+                                  class="table__product__image mt-0"
+                                />
+                              </td>
+                              <td>Black shoe</td>
+                              <td>
+                                <button
+                                  class="btn btn-success btn-sm text-white"
+                                >
+                                  View
+                                  <i
+                                    class="fa fa-eye"
+                                    style="font-size: 10px"
+                                  ></i>
+                                </button>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <img
+                                  src="images/product-image.png"
+                                  alt="product image"
+                                  class="table__product__image mt-0"
+                                />
+                              </td>
+                              <td>Black shoe</td>
+                              <td>
+                                <button
+                                  class="btn btn-success btn-sm text-white"
+                                >
+                                  View
+                                  <i
+                                    class="fa fa-eye"
+                                    style="font-size: 10px"
+                                  ></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4 gx-5 gy-4">
+                <div class="col-lg-6">
+                  <div class="card border-0">
+                    <div class="card-body p-3 p-lg-4">
+                      <div class="d-lg-flex align-items-center">
+                        <h4 class="card-title mb-3 mb-lg-0">
+                          Best Selling Products
+                        </h4>
+
+                        <div class="d-flex align-items-stretch ms-lg-auto">
+                          <input
+                            type="text"
+                            name="daterange"
+                            value="01/01/2021 - 01/15/2022"
+                            class="ms-auto bg-light border-0 p-2 w-100"
+                          />
+                          <button
+                            class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                          >
+                            <i class="fa fa-filter"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="table-responsive table__border__radius mt-3">
+                        <table class="table">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Product Name</th>
+                              <th>Image</th>
+                              <th>Product Code</th>
+                              <th>Sales (pcs)</th>
+                              <th>Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <h6 class="mb-1">Sports shoe</h6>
+                              </td>
+                              <td>
+                                <img
+                                  src="images/product-image.png"
+                                  alt="product image"
+                                  class="table__product__image mt-0"
+                                />
+                              </td>
+                              <td>SKU12457</td>
+                              <td>1289</td>
+                              <td>3.25 KWD</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h6 class="mb-1">Sports shoe</h6>
+                              </td>
+                              <td>
+                                <img
+                                  src="images/product-image.png"
+                                  alt="product image"
+                                  class="table__product__image mt-0"
+                                />
+                              </td>
+                              <td>SKU12457</td>
+                              <td>1289</td>
+                              <td>3.25 KWD</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 stretch-card">
+                  <div class="card border-0">
+                    <div class="card-body">
+                      <div class="d-lg-flex align-items-center mb-3">
+                        <h4 class="card-title mb-lg-0">Conversion Rate</h4>
+
+                        <div
+                          class="d-flex align-items-center ms-auto mb-2 mb-lg-0"
+                        >
+                          <button
+                            class="btn btn-sm bg-light ms-lg-2 text-secondary"
+                          >
+                            <i class="fa fa-filter"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="chart-container" style="height: 220px">
+                        <canvas id="areaChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="js/dashboard.js"></script>
+    <script src="js/data-table.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
+    <!-- End custom js for this page-->
+
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+  </body>
+</html>
